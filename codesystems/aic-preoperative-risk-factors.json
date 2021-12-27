@@ -1,0 +1,42 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "preoperative-risk-factors", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/preoperative-risk-factors",
+  "version": "0.1",
+  "name": "AICCELERATE Preoperative Risk Factors",
+  "title": "AICCELERATE Preoperative Risk Factors",
+  "status": "draft",  
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of custom codes defined within AICCELERATE project for important preoperative risk factors",
+  "caseSensitive": true,
+  "content": "complete",  
+  "concept": [
+    {
+      "code": "rare-disease",
+      "display": "Rare disease of particular concern",
+      "definition": "Rare disease of particular concern"      
+    },
+    {
+      "code": "attention-medication",
+      "display": "Medication requiring special attention",
+      "definition": "Medication requiring special attention"
+    },
+    {
+      "code": "restriction-treatment",
+      "display": "Restriction on treatment",
+      "definition": "Restriction on treatment"
+    }
+  ]
+}

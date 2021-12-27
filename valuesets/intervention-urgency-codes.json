@@ -1,0 +1,57 @@
+{
+  "resourceType": "ValueSet",
+  "id": "intervention-urgency-codes",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/intervention-urgency-codes",  
+  "version": "0.1",
+  "name": "AICCELERATE Intervention Urgencies",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of codes for evaluation of urgency of an surgical operation.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://aiccelerate.eu/fhir/CodeSystem/intervention-urgency-codes",        
+        "concept": [
+          {
+            "code": "R1",
+            "display": "Elective patient: (in a week)"
+          },
+          {
+            "code": "R2",
+            "display": "Elective patient: (in a month)"
+          },
+          {
+            "code": "R3",
+            "display": "Elective patient: (in 6 months)"
+          },
+          {
+            "code": "P1",
+            "display": "Urgent (0.5-3h)"
+          },
+		  {
+            "code": "P2",
+            "display": "Urgent (in 8h)"
+          },
+		  {
+            "code": "P3",
+            "display": "Urgent (in 24h)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_AdverseEvent",
+  "name": "AIC_AdverseEvent",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AdverseEvent",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AdverseEvent",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AdverseEvent.event",
+        "path": "AdverseEvent.event",
+        "min": 1
+      },
+      {
+        "id": "AdverseEvent.subject",
+        "path": "AdverseEvent.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AdverseEvent.date",
+        "path": "AdverseEvent.date",
+        "min": 1
+      }
+    ]
+  }
+}

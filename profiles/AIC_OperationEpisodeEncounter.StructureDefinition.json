@@ -1,0 +1,94 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisodeEncounter",
+  "name": "AIC_OperationEpisodeEncounter",
+  "title": "Operation Episode Encounter",
+  "status": "draft",
+  "description": "Represents interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) within the scope of an operation episode. e.g. ICU stay, pre-op visit, planning of surgery, surgery itself, etc.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter.type:operationEpisodeType",
+        "path": "Encounter.type",
+        "sliceName": "operationEpisodeType",
+        "definition": "Specific type of encounter within the operation episode of care (e.g., ICU stay, ward stay, PACU stay, surgery, surgery planning, pre-operative visit, etc.)",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/operation-encounter-types"
+        }
+      },
+      {
+        "id": "Encounter.type:operationEpisodeType.coding",
+        "path": "Encounter.type.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Encounter.subject",
+        "path": "Encounter.subject",
+        "short": "The patient present at the encounter",
+        "definition": "The patient present at the encounter."
+      },
+      {
+        "id": "Encounter.episodeOfCare",
+        "path": "Encounter.episodeOfCare",
+        "short": "Operation episode that this encounter is part of",
+        "definition": "Reference to the EpisodeOfCare that this encounter is part of",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisode"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.participant.type",
+        "path": "Encounter.participant.type",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Encounter.participant.individual",
+        "path": "Encounter.participant.individual",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PractitionerRoleForSurgicalWorkflow"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.location.location",
+        "path": "Encounter.location.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HospitalUnit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.location.period",
+        "path": "Encounter.location.period",
+        "min": 1
+      }
+    ]
+  }
+}

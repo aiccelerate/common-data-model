@@ -1,0 +1,105 @@
+{
+  "resourceType": "ValueSet",
+  "id": "preoperative-symptoms",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/preoperative-symptoms",  
+  "version": "0.1",
+  "name": "AICCELERATE Pre-operative Symptoms",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for symptoms that are important to note before operations",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "29857009",
+            "display": "Chest pain"
+          },
+          {
+            "code": "81953000",
+            "display": "Chest pain in exortion"
+          },
+          {
+            "code": "29857009+426899007",
+            "display": "Chest pain during walking"
+          },
+          {
+            "code": "9267009",
+            "display": "Chest pain at rest"
+          },
+		  {
+            "code": "39898005",
+            "display": "Sleep disorder"
+          },
+		  {
+            "code": "111489007",
+            "display": "Breathing-related sleep disorder"
+          },
+		  {
+            "code": "72863001",
+            "display": "Snoring"
+          },
+		  {
+            "code": "73430006",
+            "display": "Sleep apnea"
+          },
+		  {
+            "code": "73430006:371881003=229308003",
+            "display": "Sleep Apnea while using iterminant CPAP"
+          },
+		  {
+            "code": "267036007",
+            "display": "Dyspnea"
+          },
+		  {
+            "code": "60845006",
+            "display": "Dyspnea on exortion"
+          },
+		  {
+            "code": "267036007:371881003=870595007",
+            "display": "Dyspnea while walking"
+          },
+		  {
+            "code": "161941007",
+            "display": "Dyspnea at rest"
+          },
+		  {
+            "code": "267036007:371881003=40733004",
+            "display": "Dyspnea during infection"
+          },
+		  {
+            "code": "59140005",
+            "display": "Abnormal salivary secretion"
+          },
+		  {
+            "code": "300378004",
+            "display": "Difficulty in ability to defecate"
+          },
+		  {
+            "code": "102835006",
+            "display": "Difficulty in passing urine"
+          },
+		  {
+            "code": "64531003",
+            "display": "Nasal discharge"
+          }
+        ]
+      }
+    ]
+  }
+}

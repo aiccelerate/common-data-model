@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "id": "procedures-related-with-surgical-workflow",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/procedures-related-with-surgical-workflow",  
+  "version": "0.1",
+  "name": "AICCELERATE Procedures Related With Surgical Workflow",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of some important non-surgical procedures related with Pilot 1",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/ex-icd-10-procedures",        
+        "concept": [
+          {
+            "code": "5A05121",
+            "display": "Extracorporeal Hyperbaric Oxygenation, Intermittent"
+          },
+		   {
+            "code": "5A05221",
+            "display": "Extracorporeal Hyperbaric Oxygenation, Continuous"
+          },
+		   {
+            "code": "5A0512C",
+            "display": "Extracorporeal Supersaturated Oxygenation, Intermittent"
+          },
+		   {
+            "code": "5A0522C",
+            "display": "Extracorporeal Supersaturated Oxygenation, Continuous"
+          },		   
+          {
+            "code": "5A0935Z",
+            "display": "Assistance with Respiratory Ventilation, Less than 24 Consecutive Hours"
+          },
+          {
+            "code": "5A0945Z",
+            "display": "Assistance with Respiratory Ventilation, 24-96 Consecutive Hours"
+          },
+          {
+            "code": "5A0955Z",
+            "display": "Assistance with Respiratory Ventilation, Greater than 96 Consecutive Hours"
+          }	  
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "resourceType": "ValueSet",
+  "id": "parkinson-nonmotor-symptom-assessment-methods",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/parkinson-nonmotor-symptom-assessment-methods",  
+  "version": "0.1",
+  "name": "AICCELERATE Parkinson Non-motor Symptom Assessment Methods",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of methods used to assess non-motor smyptoms for Parkinson patients within AICCELERATE Pilot 2",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-symptom-assessment-methods",        
+        "concept": [
+          {
+            "code": "neuropath",
+            "display": "NeuroPath System (https://neuropath.life/)"
+          },
+          {
+            "code": "mds-updrs",
+            "display": "Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Questionnaire"
+          },
+          {
+            "code": "updrs3",
+            "display": "Unified Parkinson's Disease Rating Scale (UPDRS) Questionnaire v3"
+          },
+          {
+            "code": "nms",
+            "display": "Non Motor Symptom (NMS) Questionnaire"
+          },
+		  {
+            "code": "nmss",
+            "display": "Non-Motor Symptoms Scale for Parkinson's Disease (NMSS)"
+          },		
+		  {
+            "code": "health-village",
+            "display": "Health Village (https://www.terveyskyla.fi/en) Custom Questionnaire"
+          }
+        ]
+      }
+    ]
+  }
+}

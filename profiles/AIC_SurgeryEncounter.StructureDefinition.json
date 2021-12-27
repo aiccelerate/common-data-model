@@ -1,0 +1,131 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SurgeryEncounter",
+  "name": "AIC_SurgeryEncounter",
+  "title": "Surgery Encounter",
+  "status": "draft",
+  "description": "Represents the encounter for the surgery.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisodeEncounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter.type:operationEpisodeType",
+        "path": "Encounter.type",
+        "sliceName": "operationEpisodeType",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "305408004"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Encounter.serviceType",
+        "path": "Encounter.serviceType",
+        "min": 1
+      },
+      {
+        "id": "Encounter.serviceType.coding",
+        "path": "Encounter.serviceType.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Encounter.serviceType.coding:aicSurgicalSubspecialty",
+        "path": "Encounter.serviceType.coding",
+        "sliceName": "aicSurgicalSubspecialty",
+        "short": "Surgical subspecialty",
+        "definition": "Subspecialy field for surgery e.g., general surgery, breast surgery, etc.",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/surgical-subspecialties"
+        }
+      },
+      {
+        "id": "Encounter.basedOn",
+        "path": "Encounter.basedOn",
+        "definition": "Reference to the Operation Plan that this surgery is fulfilling",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationPlan"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.length",
+        "path": "Encounter.length",
+        "short": "Total duration of surgery",
+        "definition": "Total duration of surgery in terms of minutes",
+        "min": 1
+      },
+      {
+        "id": "Encounter.length.system",
+        "path": "Encounter.length.system",
+        "fixedUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Encounter.length.code",
+        "path": "Encounter.length.code",
+        "fixedCode": "min"
+      },
+      {
+        "id": "Encounter.reasonCode",
+        "path": "Encounter.reasonCode",
+        "short": "Coded reason the surgery is cancelled",
+        "definition": "Reason the surgery is cancelled",
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "description": "Reason why the encounter is cancelled",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/operation-cancellation-reasons"
+        }
+      },
+      {
+        "id": "Encounter.reasonReference",
+        "path": "Encounter.reasonReference",
+        "short": "Reason the surgery is about",
+        "definition": "Reference to the main diagnosis that this surgery is about",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.location",
+        "path": "Encounter.location",
+        "min": 1
+      },
+      {
+        "id": "Encounter.location.status",
+        "path": "Encounter.location.status",
+        "min": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_GlascowComaScaleObservation",
+  "name": "AIC_GlascowComaScaleObservation",
+  "title": "Glascow Coma Scale Observation",
+  "status": "draft",
+  "description": "Represents Glascow Coma Scale (GCS) assesment about a patient",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) and one of the generic profiles that is commonly used in two pilots; i) Pilot 1- Patient flow management for Emergency Room and Surgical units. and Pilto 3 - Palliative and chronic pediatric service delivery and patient workflow",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:aicGcsCode",
+        "path": "Observation.code.coding",
+        "sliceName": "aicGcsCode",
+        "min": 1,
+        "max": "1",
+        "fixedCoding": {
+          "system": "http://loinc.org"
+        }
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "GCS score",
+        "definition": "GCS assessment score",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "fixedQuantity": {
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code.coding.system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.component:gcsEyeOpening",
+        "path": "Observation.component",
+        "sliceName": "gcsEyeOpening",
+        "short": "GCS Eye Opening assessment",
+        "definition": "GCS Eye Opening assessment (1 - 4)",
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:gcsEyeOpening.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "1",
+        "fixedCoding": {
+          "system": "http://loinc.org",
+          "code": "9267-6"
+        }
+      },
+      {
+        "id": "Observation.component:gcsEyeOpening.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "fixedQuantity": {
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      },
+      {
+        "id": "Observation.component:gcsVerbalResponse",
+        "path": "Observation.component",
+        "sliceName": "gcsVerbalResponse",
+        "short": "GCS Verbal Response Assessment",
+        "definition": "GCS Verbal Response Assessment (1-5)"
+      },
+      {
+        "id": "Observation.component:gcsVerbalResponse.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "1",
+        "fixedCoding": {
+          "system": "http://loinc.org",
+          "code": "9270-0"
+        }
+      },
+      {
+        "id": "Observation.component:gcsVerbalResponse.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "fixedQuantity": {
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      },
+      {
+        "id": "Observation.component:gcsMotorResponse",
+        "path": "Observation.component",
+        "sliceName": "gcsMotorResponse",
+        "short": "GCS Motor Response Assessment",
+        "definition": "GCS Motor Response Assessment (1-6)"
+      },
+      {
+        "id": "Observation.component:gcsMotorResponse.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "1",
+        "fixedCoding": {
+          "system": "http://loinc.org",
+          "code": "9268-4"
+        }
+      },
+      {
+        "id": "Observation.component:gcsMotorResponse.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "fixedQuantity": {
+          "system": "http://unitsofmeasure.org"
+        }
+      }
+    ]
+  }
+}

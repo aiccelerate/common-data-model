@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pediatric-palliative-care-symptoms",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/pediatric-palliative-care-symptoms",  
+  "version": "0.1",
+  "name": "AICCELERATE Pediatric Palliative Care Symptoms",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of symptoms used for pediatric palliative care",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "170707004",
+            "display": "Seizures"
+          },
+          {
+            "code": "263731006",
+            "display": "Coughing"
+          },
+          {
+            "code": "64531003",
+            "display": "Nasal Mucus"
+          },
+          {
+            "code": "55929007",
+            "display": "Feeling irritability"
+          },
+		  {
+            "code": "301345002",
+            "display": "Difficulty sleeping"
+          },
+		  {
+            "code": "22253000",
+            "display": "Pain"
+          },
+		  {
+            "code": "300359004",
+            "display": "Vomiting"
+          }		
+        ]
+      }
+    ]
+  }
+}

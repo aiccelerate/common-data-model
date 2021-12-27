@@ -1,0 +1,41 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ResponseToCancerTreatment",
+  "name": "AIC_ResponseToCancerTreatment",
+  "title": "Response to Cancer Treatment",
+  "status": "draft",
+  "description": "Represents an observation about the response to cancer treatment",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 2 - Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding:aicObservationCode",
+        "path": "Observation.code.coding",
+        "sliceName": "aicObservationCode",
+        "fixedCoding": {
+          "system": "http://loinc.org",
+          "code": "88040-1"
+        }
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/cancer-treatment-responses"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "pediatric-risk-assessments", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/pediatric-risk-assessments",
+  "version": "0.1",
+  "name": "AICCELERATE Risk Assessments for Chronic or Palliative Pediatric Care",
+  "title": "AICCELERATE Risk Assessments for Chronic or Palliative Pediatric Care",
+  "status": "draft",  
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of custom codes defined within AICCELERATE project for risk assessments done by AICCELERATE SHCP Engine within the scope of pediatric palliative care",
+  "caseSensitive": true,
+  "content": "complete",  
+  "concept": [
+		{
+            "code": "ppc-risk-category",
+            "display": "Palliative patient's current risk category evaluation"
+          }
+  ]
+}

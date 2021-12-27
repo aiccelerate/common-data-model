@@ -1,0 +1,69 @@
+{
+  "resourceType": "ValueSet",
+  "id": "parkinson-non-motor-symptoms",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/parkinson-non-motor-symptoms",  
+  "version": "0.1",
+  "name": "AICCELERATE Parkinson Non Motor Symptoms",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of important non motor symptoms for Parkinson disease.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "286366005",
+            "display": "Difficulty using language"
+          },
+          {
+            "code": "39898005",
+            "display": "Sleep disorder"
+          },
+          {
+            "code": "713567005",
+            "display": "Daytime sleepiness"
+          },
+          {
+            "code": "404640003",
+            "display": "Dizziness"
+          },
+		  {
+            "code": "415690000",
+            "display": "Sweating"
+          },
+		  {
+            "code": "139394000",
+            "display": "Nocturia"
+          },
+		  {
+            "code": "422587007",
+            "display": "Nausea"
+          },
+		  {
+            "code": "14760008",
+            "display": "Constipation"
+          },
+		  {
+            "code": "22253000",
+            "display": "Pain"
+          }
+        ]
+      }
+    ]
+  }
+}

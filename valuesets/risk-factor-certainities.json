@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "risk-factor-certanities",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/risk-factor-certanities",  
+  "version": "0.1",
+  "name": "AICCELERATE Risk Factor Certainities",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes indicating the certainity of a risk factor",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "255545003",
+            "display": "Definite"
+          },
+          {
+            "code": "2931005",
+            "display": "Probable"
+          },
+          {
+            "code": "60022001",
+            "display": "Possible(Suspicion)"
+          }
+        ]
+      }
+    ]
+  }
+}

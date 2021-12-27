@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "parkinson-encounter-types",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/parkinson-encounter-types",  
+  "version": "0.1",
+  "name": "AICCELERATE Parkinson Care Encounter Types",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for encounter types for parkinson care",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "225398001",
+            "display": "Neurological Assessment"
+          },
+          {
+            "code": "307808008",
+            "display": "Neuropsychological Assesment"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "resourceType": "ValueSet",
+  "id": "operation-encounter-types",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/operation-encounter-types",  
+  "version": "0.1",
+  "name": "AICCELERATE Surgical Workflow Encounter Types",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for encounter types within a surgical episode for AICCELERATE SHCP Patient Flow Management for ER and Surgical Units scenario.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "305351004",
+            "display": "ICU Stay (Admission to intensive care unit)"
+          },
+          {
+            "code": "305354007",
+            "display": "Ward Stay (Admission to medical department)"
+          },
+          {
+            "code": "305408004",
+            "display": "Operation (Admission to surgical department)"
+          },
+          {
+            "code": "866171008",
+            "display": "Surgical Planning"
+          },
+		  {
+            "code": "703120008",
+            "display": "Pre-surgery Visit (Pre-admission assessment for major surgery)"
+          },
+		  {
+            "code": "398068008",
+            "display": "PACU Stay (Transfer to PACU)"
+          }
+        ]
+      }
+    ]
+  }
+}

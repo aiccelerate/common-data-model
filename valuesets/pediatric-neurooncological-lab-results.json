@@ -1,0 +1,165 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pediatric-neurooncological-lab-results",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/pediatric-neurooncological-lab-results",  
+  "version": "0.1",
+  "name": "AICCELERATE Pediatric Neurooncological Lab Results",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of LOINC codes for lab results related with pediatric oncology",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+		  {
+            "code": "6690-2",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+		  {
+            "code": "26464-8",
+            "display": "Leukocytes [#/volume] in Blood"
+          },
+		  {
+            "code": "751-8",
+            "display": "Neutrophils [#/volume] in Blood by Automated count"
+          },
+		  {
+            "code": "26499-4",
+            "display": "Neutrophils [#/volume] in Blood"
+          },
+		  {
+            "code": "1988-5",
+            "display": "C reactive protein [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "30522-7",
+            "display": "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+          },
+		  {
+            "code": "2951-2",
+            "display": "Sodium [Moles/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2777-1",
+            "display": "Phosphate [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2823-3",
+            "display": "Potassium [Moles/volume] in Serum or Plasma."
+          },
+		  {
+            "code": "2601-3",
+            "display": "Magnesium [Moles/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "718-7",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+		  {
+            "code": "777-3",
+            "display": "Platelets [#/volume] in Blood by Automated count"
+          },
+		  {
+            "code": "26515-7",
+            "display": "Platelets [#/volume] in Blood"
+          },
+		  {
+            "code": "1751-7",
+            "display": "Albumin [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "14979-9",
+            "display": "aPTT in Platelet poor plasma by Coagulation assay"
+          },
+		  {
+            "code": "2160-0",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "33863-2",
+            "display": "Cystatin C [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "6299-2",
+            "display": "Urea nitrogen [Mass/volume] in Blood"
+          },
+		  {
+            "code": "1742-6",
+            "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "1975-2",
+            "display": "Bilirubin. total [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "15152-2",
+            "display": "Bilirubin. conjugated [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "3016-3",
+            "display": "Thyrotropin [Units/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "11579-0",
+            "display": "Thyrotropin [Units/volume] in Serum or Plasma by Detection limit <= 0.05 mIU/L"
+          },
+		  {
+            "code": "3026-2",
+            "display": "Thyroxine (T4) [Mass/volume] in Serum or Plasma "
+          },
+		  {
+            "code": "2484-4",
+            "display": "Insulin-like growth factor-I [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2141-0",
+            "display": "Corticotropin [Mass/volume] in Plasma"
+          },
+		  {
+            "code": "2143-6",
+            "display": "Cortisol [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "15067-2",
+            "display": "Follitropin [Units/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "10501-5",
+            "display": "Lutropin [Units/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2243-4",
+            "display": "Estradiol (E2) [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "83104-0",
+            "display": "Mullerian inhibiting substance [Mass/volume] in Serum or Plasma by Immunoassay"
+          },
+		  {
+            "code": "2986-8",
+            "display": "Testosterone [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "34319-4",
+            "display": "Inhibin B [Mass/volume] in Serum or Plasma"
+          }	  
+        ]
+      }
+    ]
+  }
+}

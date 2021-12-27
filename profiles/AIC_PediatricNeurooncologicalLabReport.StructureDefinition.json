@@ -1,0 +1,32 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalLabReport",
+  "name": "AIC_PediatricNeurooncologicalLabReport",
+  "title": "Pediatric Neurooncological Lab Report",
+  "status": "draft",
+  "description": "It is the extension of AIC_PediatricNeurooncologicalDiagnosticStudyReport profile to represent a laboratory study report prepared based on a specific lab order for a patient.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 1 - Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalDiagnosticStudyReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport.category:aicDiagnosticStudyCategoryCode",
+        "path": "DiagnosticReport.category",
+        "sliceName": "aicDiagnosticStudyCategoryCode",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+              "code": "LAB"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

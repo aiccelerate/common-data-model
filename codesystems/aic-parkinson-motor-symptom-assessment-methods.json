@@ -1,0 +1,67 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "parkinson-motor-symptom-assessment-methods", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-motor-symptom-assessment-methods",
+  "version": "0.1",
+  "name": "AICCELERATE Parkinson Motor Symptom Assessment Methods",
+  "title": "AICCELERATE Parkinson Motor Symptom Assessment Methods",
+  "status": "draft",  
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of custom codes defined within AICCELERATE project for methods of assessments for parkinson motor symptoms",
+  "caseSensitive": true,
+  "content": "complete",  
+  "concept": [
+          {
+            "code": "neuropath",
+            "display": "NeuroPath System (https://neuropath.life/)"
+          },
+          {
+            "code": "mds-updrs",
+            "display": "Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Questionnaire"
+          },
+          {
+            "code": "updrs3",
+            "display": "Unified Parkinson's Disease Rating Scale (UPDRS) Questionnaire v3"
+          },
+          {
+            "code": "pkg-ptt",
+            "display": "Parkinson KinetiGraph Percent Time Tremor (PTT) Score"
+          },
+		  {
+            "code": "pkg-dks",
+            "display": "Parkinson KinetiGraph Dyskenizia Score (DKS)"
+          },
+		  {
+            "code": "pkg-fds",
+            "display": "Parkinson KinetiGraph Fluctuation Score (FDS)"
+          },
+		  {
+            "code": "pkg-bks",
+            "display": "Parkinson KinetiGraph Bradykinesia score (BKS)"
+          },
+		  {
+            "code": "pkg-pti",
+            "display": "Parkinson KinetiGraph Percent Time Immobility (PTI)"
+          },
+		  {
+            "code": "n-fogq",
+            "display": "New Freezing of Gait Questionnaire"
+          },
+		  {
+            "code": "health-village",
+            "display": "Health Village (https://www.terveyskyla.fi/en) Custom Questionnaire"
+          }
+  ]
+}

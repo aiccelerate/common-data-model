@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "operation-phases",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/operation-phases",  
+  "version": "0.1",
+  "name": "AICCELERATE Operation Phases",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for surgery phases",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "305408004",
+            "display": "Enrollment Phase"
+          },
+          {
+            "code": "1889001",
+            "display": "Transfer Phase"
+          },
+          {
+            "code": "399097000",
+            "display": "Anesthesia Phase"
+          },
+          {
+            "code": "387713003",
+            "display": "Surgery Phase"
+          },
+		  {
+            "code": "441869008",
+            "display": "Cleaning Phase"
+          }
+        ]
+      }
+    ]
+  }
+}

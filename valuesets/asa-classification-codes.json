@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "asa-classification-codes",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/asa-classification-codes",  
+  "version": "0.1",
+  "name": "AICCELERATE ASA Classification Codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "The American Society of Anesthesiologists (ASA) physical health classification system grades a patient's overall health before surgery (See https://loinc.org/LL5905-6/).",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+          {
+            "code": "LA32129-1",
+            "display": "ASA1 (no disturbance)"
+          },
+		  {
+            "code": "LA32130-9",
+            "display": "ASA2 (mild/moderate)"
+          },
+		  {
+            "code": "LA32131-7",
+            "display": "ASA3 (severe)"
+          },
+		  {
+            "code": "LA32132-5",
+            "display": "ASA4 (life threatening)"
+          },
+		  {
+            "code": "LA32133-3",
+            "display": "ASA5 (moribund)"
+          }
+        ]
+      },
+	  {
+		"system": "http://snomed.info/sct", 
+		"concept": [
+          {
+			"code": "261665006",
+            "display": "Unknown"
+		  }
+		]
+	  }
+    ]
+  }
+}

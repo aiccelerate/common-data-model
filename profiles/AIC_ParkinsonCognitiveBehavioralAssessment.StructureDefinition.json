@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonCognitiveBehavioralAssessment",
+  "name": "AIC_ParkinsonCognitiveBehavioralAssessment",
+  "title": "Parkinson Cognitive Or Behavioral Assessment",
+  "status": "draft",
+  "description": "An assessment for cognitive or behavioral abilities/functions e.g., MMSE, MoCA, etc.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 2 - Chronic adult care – Parkinson’s disease.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/parkinson-cognitive-behavioral-assessments"
+        }
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "fixedQuantity": {
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      }
+    ]
+  }
+}

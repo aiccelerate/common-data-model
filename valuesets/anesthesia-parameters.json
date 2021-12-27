@@ -1,0 +1,283 @@
+{
+  "resourceType": "ValueSet",
+  "id": "anesthesia-parameters",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/anesthesia-parameters",  
+  "version": "0.1",
+  "name": "AICCELERATE Anesthesia Parameters",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of LOINC codes for important observations during a surgical operation related with anesthesia",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+		  {
+            "code": "60907-3",
+            "display": "Sevoflurane [VFr/PPres] Airway adaptor --during inspiration"
+          },
+		  {
+            "code": "60805-9",
+            "display": "Desflurane [VFr/PPres] Airway adaptor --during inspiration"
+          },
+		  {
+            "code": "60807-5",
+            "display": "Sevoflurane [VFr/PPres] Airway adaptor --during expiration"
+          },
+		  {
+            "code": "62265-4",
+            "display": "Desflurane [VFr/PPres] Airway adaptor --during expiration"
+          },
+		  {
+            "code": "60804-2",
+            "display": "Minimum alveolar concentration (MAC) for anesthesia.XXX Anesthetic agent.XXX"
+          },
+		  {
+            "code": "3151-8",
+            "display": "Inhaled oxygen flow rate"
+          },
+		  {
+            "code": "75924-1",
+            "display": "Fresh gas.nitrous oxide flow Gas delivery system"
+          },
+		  {
+            "code": "75923-3",
+            "display": "Fresh gas.air flow Gas delivery system"
+          },
+		  {
+            "code": "19994-3",
+            "display": "Oxygen/Total gas setting [Volume Fraction] Ventilator"
+          },
+		  {
+            "code": "2708-6",
+            "display": "Oxygen saturation in Arterial blood"
+          },
+		  {
+            "code": "60809-1",
+            "display": "Carbon dioxide [VFr/PPres] in Airway adaptor --during expiration"
+          },
+		  {
+            "code": "3150-0",
+            "display": "Inhaled oxygen concentration"
+          },
+		  {
+            "code": "60939-6",
+            "display": "Nitrous oxide [VFr/PPres] Airway adaptor --during expiration"
+          },
+		  {
+            "code": "75960-5",
+            "display": "Inspired minute volume"
+          },
+		  {
+            "code": "76007-4",
+            "display": "Tidal volume expired Respiratory system airway --on ventilator"
+          },
+		  {
+            "code": "60952-9",
+            "display": "Mean airway pressure --during inspiration"
+          },
+		  {
+            "code": "9279-1",
+            "display": "Respiratory rate"
+          },
+		  {
+            "code": "76270-8",
+            "display": "Respiratory rate by Impedance.transthoracic"
+          },
+		  {
+            "code": "20077-4",
+            "display": "Positive end expiratory pressure setting Ventilator"
+          },
+		  {
+            "code": "8867-4",
+            "display": "Heart rate"
+          },
+		  {
+            "code": "60985-9",
+            "display": "Central venous pressure (CVP)"
+          },
+		  {
+            "code": "76534-7",
+            "display": "Systolic blood pressure by Noninvasive"
+          },
+		  {
+            "code": "76536-2",
+            "display": "Mean blood pressure by Noninvasive"
+          },
+		  {
+            "code": "76535-4",
+            "display": "Diastolic blood pressure by Noninvasive"
+          },
+		  {
+            "code": "76215-3",
+            "display": "Invasive Systolic blood pressure"
+          },
+		  {
+            "code": "76214-6",
+            "display": "Invasive Mean blood pressure"
+          },
+		  {
+            "code": "76213-8",
+            "display": "Invasive Diastolic blood pressure"
+          },
+		  {
+            "code": "8440-0",
+            "display": "Pulmonary artery Systolic blood pressure"
+          },
+		  {
+            "code": "8414-5",
+            "display": "Pulmonary artery Mean blood pressure"
+          },
+		  {
+            "code": "8385-7",
+            "display": "Pulmonary artery Diastolic blood pressure"
+          },
+		  {
+            "code": "75994-4",
+            "display": "Pulmonary artery wedge pressure"
+          },
+		  {
+            "code": "LP19466-9",
+            "display": "Cardiac output"
+          },
+		  {
+            "code": "8750-2",
+            "display": "Left ventricular Cardiac index by Fick method"
+          },
+		  {
+            "code": "18566-0",
+            "display": "ST amplitude.J point+60 ms Lead V5"
+          },
+		  {
+            "code": "18545-4",
+            "display": "ST amplitude.J point+20 ms Lead AVL"
+          },
+		  {
+            "code": "75949-8",
+            "display": "Response entropy [Score] Cerebral cortex Electroencephalogram (EEG)"
+          },
+		  {
+            "code": "75954-8",
+            "display": "State entropy [Score] Cerebral cortex Electroencephalogram (EEG)"
+          },
+		  {
+            "code": "61010-5",
+            "display": "Burst suppression ratio [Ratio] Cerebral cortex Electroencephalogram (EEG)"
+          },
+		  {
+            "code": "LP187002-3",
+            "display": "Bispectral index"
+          },
+		  {
+            "code": "59561-1",
+            "display": "Propofol glucuronide [Mass/volume] in Urine"
+          },
+		  {
+            "code": "58381-5",
+            "display": "fentaNYL [Mass/volume] in Urine by Confirmatory method"
+          },
+		  {
+            "code": "8328-7",
+            "display": "Axillary temperature"
+          },
+		  {
+            "code": "91371-5",
+            "display": "Body temprature brain"
+          },
+		  {
+            "code": "8331-1",
+            "display": "Body temperature mouth"
+          },
+		  {
+            "code": "8332-9",
+            "display": "Body temperature rectum"
+          },
+		  {
+            "code": "8333-7",
+            "display": "Tympanic membrane temperature"
+          },
+		  {
+            "code": "8334-5",
+            "display": "Body temperature - Urinary bladder"
+          },
+		  {
+            "code": "76010-8",
+            "display": "Body temperature nose"
+          },
+		  {
+            "code": "60836-4",
+            "display": "Esophageal temperature"
+          },
+		  {
+            "code": "39106-0",
+            "display": "Body temperature skin"
+          },
+		  {
+            "code": "60834-9",
+            "display": "Blood temperature"
+          },
+		  {
+            "code": "60956-0",
+            "display": "Intracranial pressure (ICP)"
+          }		  
+        ]
+      },
+	  {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+		  {
+			"code": "250832007",
+			"display": "Train of four count (TOF)"
+		  },
+		  {
+			"code": "250831000",
+			"display": "Train of four (TOF) ratio"
+		  },
+		  {
+			"code": "733502006",
+			"display": "Stroke volume variation (SVV)"
+		  }
+		 ]
+	  },
+	  {
+        "system": "https://aiccelerate.eu/fhir/CodeSystem/anesthesia-parameters",        
+        "concept": [
+		  {
+			"code": "rso2-l",
+			"display": "Regional oxygen saturation index (RSO2) L"
+		  },
+		  {
+			"code": "rso2-r",
+			"display": "Regional oxygen saturation index (RSO2) R"
+		  },
+		  {
+			"code": "rso2-s1",
+			"display": "Regional oxygen saturation index (RSO2) S1"
+		  },
+		  {
+			"code": "rso2-s2",
+			"display": "Regional oxygen saturation index (RSO2) S2"
+		  },
+		  {
+			"code": "spi",
+			"display": "Surgical Pleth Index"
+		  }
+		 ]
+	  }
+    ]
+  }
+}

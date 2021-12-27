@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "medications",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/medications",  
+  "version": "0.1",
+  "name": "AICCELERATE Medications",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of codes to indicate the medications either by its ingredient or specific drug by ATC or RxNorm",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://www.whocc.no/atc"
+	  },
+	  {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",        
+		"filter": [
+		  {
+            "property": "TTY",
+            "op": "=",
+            "value": "PSN"
+          }
+		]
+	  }
+    ]
+  }
+}

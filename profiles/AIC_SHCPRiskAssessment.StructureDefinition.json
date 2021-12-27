@@ -1,0 +1,81 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SHCPRiskAssessment",
+  "name": "AIC_SHCPRiskAssessment",
+  "status": "draft",
+  "description": "This is the base profile that represents a risk assessment/prediction done by SHCP Engine in pilots e.g., risk of sepsis after operation, risk of operation cancellation.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) and one of the base profiles that is commonly used in all three pilots; i) Pilot 1- Patient flow management for Emergency Room and Surgical units., ii) Pilot 2 - Chronic adult care – Parkinson’s disease, iii)  Palliative and chronic pediatric service delivery and patient workflow",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "RiskAssessment",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RiskAssessment.subject",
+        "path": "RiskAssessment.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RiskAssessment.encounter",
+        "path": "RiskAssessment.encounter",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Encounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RiskAssessment.occurrence[x]",
+        "path": "RiskAssessment.occurrence[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "RiskAssessment.prediction",
+        "path": "RiskAssessment.prediction",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "aic-ra-1",
+            "severity": "error",
+            "human": "Either qualitative or probability should be given",
+            "expression": "probability.count() > 0 or qualitativeRisk.count() > 0",
+            "source": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SHCPRiskAssessment"
+          }
+        ]
+      },
+      {
+        "id": "RiskAssessment.prediction.outcome",
+        "path": "RiskAssessment.prediction.outcome",
+        "min": 1
+      },
+      {
+        "id": "RiskAssessment.prediction.probability[x]",
+        "path": "RiskAssessment.prediction.probability[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      }
+    ]
+  }
+}

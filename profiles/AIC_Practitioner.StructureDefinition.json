@@ -1,0 +1,85 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Practitioner",
+  "name": "AIC_Practitioner",
+  "title": "Practitioner",
+  "status": "draft",
+  "description": "Represents the basic identity information about a practitioner within a hospital",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) and one of the base profiles that is commonly used in all three pilots; i) Pilot 1- Patient flow management for Emergency Room and Surgical units., ii) Pilot 2 - Chronic adult care – Parkinson’s disease, iii)  Palliative and chronic pediatric service delivery and patient workflow",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Practitioner",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Practitioner.identifier",
+        "path": "Practitioner.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "use"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Practitioner.identifier:personelId",
+        "path": "Practitioner.identifier",
+        "sliceName": "personelId",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Practitioner.identifier:personelId.use",
+        "path": "Practitioner.identifier.use",
+        "min": 1,
+        "fixedCode": "official"
+      },
+      {
+        "id": "Practitioner.identifier:personelId.value",
+        "path": "Practitioner.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.qualification",
+        "path": "Practitioner.qualification",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code.coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Practitioner.qualification:mainQualification",
+        "path": "Practitioner.qualification",
+        "sliceName": "mainQualification",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Practitioner.qualification:mainQualification.code",
+        "path": "Practitioner.qualification.code",
+        "binding": {
+          "strength": "required"
+        }
+      },
+      {
+        "id": "Practitioner.qualification:mainQualification.code.coding",
+        "path": "Practitioner.qualification.code.coding",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

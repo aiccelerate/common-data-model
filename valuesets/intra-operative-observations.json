@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "id": "intra-operative-observations",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/intra-operative-observations",  
+  "version": "0.1",
+  "name": "AICCELERATE Intra Operative Observations",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of codes for important intra operative observations",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+		  {
+            "code": "9110-8",
+            "display": "Cumulative Bleeding [Volume]"
+          },
+		  {
+            "code": "1335-9",
+            "display": "Whole Blood Given [Volume]"
+          },
+		  {
+            "code": "1299-7",
+            "display": "Platelets given [Volume]"
+          },
+		  {
+            "code": "1035-5",
+            "display": "Fresh frozen plasma given [Volume]"
+          },
+		  {
+            "code": "1298-9",
+            "display": "Packed erythrocytes given [Volume]"
+          },
+		  {
+            "code": "38214-3",
+            "display": "Visual Analog Scale(VAS) (0-10 scale)"
+          },
+		  {
+            "code": "9187-6",
+            "display": "Urine output"
+          }
+        ]
+      }
+    ]
+  }
+}

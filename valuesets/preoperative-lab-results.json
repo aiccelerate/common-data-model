@@ -1,0 +1,173 @@
+{
+  "resourceType": "ValueSet",
+  "id": "preoperative-lab-results",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/preoperative-lab-results",  
+  "version": "0.1",
+  "name": "AICCELERATE Preoperative Lab Results",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of LOINC codes for important lab results related with surgical workflow",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+		  {
+            "code": "718-7",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+		  {
+            "code": "20570-8",
+            "display": "Hematocrit [Volume Fraction] of Blood"
+          },
+		  {
+            "code": "26464-8",
+            "display": "Leukocytes [#/volume] in Blood"
+          },
+		  {
+            "code": "26499-4",
+            "display": "Neutrophils [#/volume] in Blood"
+          },
+		  {
+            "code": "26515-7",
+            "display": "Platelets [#/volume] in Blood"
+          },
+		  {
+            "code": "33959-8",
+            "display": "Procalcitonin [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2524-7",
+            "display": "Lactate [Moles/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2746-6",
+            "display": "pH of Venous blood"
+          },
+		  {
+            "code": "2021-4",
+            "display": "Carbon dioxide [Partial pressure] in Venous blood"
+          },
+		  {
+            "code": "14627-4",
+            "display": "Bicarbonate [Moles/volume] in Venous blood"
+          },
+		  {
+            "code": "2745-8",
+            "display": "pH of Capillary blood"
+          },
+		  {
+            "code": "2020-6",
+            "display": "Carbon dioxide [Partial pressure] in Capillary blood"
+          },
+		  {
+            "code": "2744-1",
+            "display": "pH of Arterial blood"
+          },
+		  {
+            "code": "2019-8",
+            "display": "Carbon dioxide [Partial pressure] in Arterial blood"
+          },
+		  {
+            "code": "2708-6",
+            "display": "Oxygen saturation in Arterial blood"
+          },
+		  {
+            "code": "2711-0",
+            "display": "Oxygen saturation in Venous blood"
+          },
+		  {
+            "code": "2951-2",
+            "display": "Sodium [Moles/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2823-3",
+            "display": "Potassium [Moles/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2075-0",
+            "display": "Chloride [Moles/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "17861-6",
+            "display": "Calcium [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2947-0",
+            "display": "Sodium [Moles/volume] in Blood"
+          },
+		  {
+            "code": "6298-4",
+            "display": "Potassium [Moles/volume] in Blood"
+          },
+		  {
+            "code": "2069-3",
+            "display": "Chloride [Moles/volume] in Blood"
+          },
+		  {
+            "code": "1994-3",
+            "display": "Calcium [Mass/volume] in Blood"
+          },
+		  {
+            "code": "3173-2",
+            "display": "aPTT in Blood by Coagulation assay"
+          },
+		  {
+            "code": "5902-2",
+            "display": "Prothrombin time (PT)"
+          },
+		  {
+            "code": "3255-7",
+            "display": "Fibrinogen [Mass/volume] in Platelet poor plasma by Coagulation assay"
+          },
+		  {
+            "code": "33762-6",
+            "display": "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "10839-9",
+            "display": "Troponin I. cardiac [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2339-0",
+            "display": "Glucose [Mass/volume] in Blood"
+          },
+		  {
+            "code": "1742-6",
+            "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "1920-8",
+            "display": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2324-2",
+            "display": "Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "3094-0",
+            "display": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "2160-0",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma"
+          }	  
+        ]
+      }
+    ]
+  }
+}

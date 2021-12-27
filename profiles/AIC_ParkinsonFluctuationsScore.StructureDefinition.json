@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonFluctuationsScore",
+  "name": "AIC_ParkinsonFluctuationsScore",
+  "title": "Parkinson Fluctuations Score",
+  "status": "draft",
+  "description": "An  score calculated about fluctuation by a specific method. Motor fluctuations are drastic changes in the motor symptoms during the day which includes delayed on, sudden on-off, no-on, wearing-off, off-time.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 2 - Chronic adult care – Parkinson’s disease.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonMotorObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-observations",
+              "code": "fluctuations"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "fixedQuantity": {
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      }
+    ]
+  }
+}

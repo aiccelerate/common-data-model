@@ -1,0 +1,109 @@
+{
+  "resourceType": "ValueSet",
+  "id": "practitioner-roles-for-pediatric-neurooncology",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/practitioner-roles-for-pediatric-neurooncology",  
+  "version": "0.1",
+  "name": "AICCELERATE Practitioner Roles For Pediatric Neurooncology",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for practitioner roles in AICCELERATE Pilot 3 Pediatric Neurooncology workflow",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "1421009",
+            "display": "Specialized surgeon"
+          },
+          {
+            "code": "78703002",
+            "display": "General surgeon"
+          },
+          {
+            "code": "304292004+118629009",
+            "display": "Surgeon in training"
+          },
+          {
+            "code": "88189002",
+            "display": "Anesthesiologist"
+          },
+		  {
+            "code": "106292003",
+            "display": "Nurse"
+          },
+		  {
+            "code": "405278004",
+            "display": "Anesthesia nurse"
+          },		  
+		  {
+            "code": "415075003",
+            "display": "Theather nurse"
+          },
+		  {
+            "code": "56397003",
+            "display": "Neurologist"
+          },
+		  {
+            "code": "21450003",
+            "display": "Neuropsychiatrist"
+          },
+		  {
+            "code": "66862007",
+            "display": "Radiologist"
+          },
+		  {
+            "code": "61207006",
+            "display": "Medical pathologist"
+          },
+		  {
+            "code": "80933006",
+            "display": "Nuclear medicine specialist"
+          },
+		  {
+            "code": "82296001",
+            "display": "Pediatrician"
+          },
+		  {
+            "code": "309334002",
+            "display": "Pediatric neurologist"
+          },
+		  {
+            "code": "309336000",
+            "display": "Pediatric oncologist"
+          },
+		  {
+            "code": "224562001",
+            "display": "Pediatric nurse"
+          },
+		  {
+            "code": "159282002",
+            "display": "Laboratory technician"
+          },
+		  {
+            "code": "386629007",
+            "display": "Laboratory technologist"
+          },
+		  {
+            "code": "307988006",
+            "display": "Medical technician"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "id": "practitioner-roles-for-surgery",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/practitioner-roles-for-surgery",  
+  "version": "0.1",
+  "name": "AICCELERATE Practitioner Roles For Surgery",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for practitioner roles in surgical workflow",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "1421009",
+            "display": "Specialized surgeon"
+          },
+          {
+            "code": "78703002",
+            "display": "General surgeon"
+          },
+          {
+            "code": "304292004+118629009",
+            "display": "Surgeon in training"
+          },
+          {
+            "code": "88189002",
+            "display": "Anesthesiologist"
+          },
+		  {
+            "code": "106292003",
+            "display": "Nurse"
+          },
+		  {
+            "code": "405278004",
+            "display": "Anesthesia nurse"
+          },		  
+		  {
+            "code": "415075003",
+            "display": "Theather nurse"
+          }
+        ]
+      }
+    ]
+  }
+}

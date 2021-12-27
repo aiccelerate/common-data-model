@@ -1,0 +1,124 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationPhasePlan",
+  "name": "AIC_OperationPhasePlan",
+  "status": "draft",
+  "description": "A plan or schedule for a phase of the operation (e.g., surgery phase, anesthesia phase, etc)",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.basedOn",
+        "path": "ServiceRequest.basedOn",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationPlan"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "definition": "Status of the plan (draft | active  | revoked | completed)\r\n    - draft: Used for any draft version of the plan\r\n    - active: Used when plan is activated \r\n    - revoked: Used when plan is revoked by the practitioner who does it (do not use for cancelled operations)\r\n   - completed: Used when this plan is no longer active as it is already done or operation is cancelled"
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "definition": "Whether the request is a proposal, plan, or order? (proposal | plan | order)\r\n    proposal: Indicates that patient is added to the operation queue but scheduling is not done yet\r\n    plan: Indicates that this is a interim plan for the operation or its phases (or suggestion of plan by SHCP)\r\n    order: Indicates that this record shows the final approved scheduled operation or its phases"
+      },
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.category:aicOperationPhaseCategory",
+        "path": "ServiceRequest.category",
+        "sliceName": "aicOperationPhaseCategory",
+        "short": "Classification of operation phase",
+        "definition": "A code that classifies the phase of the operation (e.g., enrollment, transportation, anesthesia, surgery, cleaning)",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Classification of operation phase.",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/operation-phases"
+        }
+      },
+      {
+        "id": "ServiceRequest.category:aicOperationPhaseCategory.coding",
+        "path": "ServiceRequest.category.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.encounter",
+        "path": "ServiceRequest.encounter",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisodeEncounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.occurrence[x]",
+        "path": "ServiceRequest.occurrence[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.locationReference",
+        "path": "ServiceRequest.locationReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Location",
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HospitalUnit"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

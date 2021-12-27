@@ -1,0 +1,70 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ComplicationAfterOperation",
+  "name": "AIC_ComplicationAfterOperation",
+  "title": "Complication After Operation",
+  "status": "draft",
+  "description": "Information about a complication after surgery e.g., sepsis, reoperation, etc.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AdverseEvent",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_AdverseEvent",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AdverseEvent.event.coding",
+        "path": "AdverseEvent.event.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "AdverseEvent.event.coding:aicComplicationAfterSurgery",
+        "path": "AdverseEvent.event.coding",
+        "sliceName": "aicComplicationAfterSurgery",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "List of complications listed in AICCELERATE",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/complications-after-operation"
+        }
+      },
+      {
+        "id": "AdverseEvent.encounter",
+        "path": "AdverseEvent.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisodeEncounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AdverseEvent.location",
+        "path": "AdverseEvent.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Location",
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HospitalUnit"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

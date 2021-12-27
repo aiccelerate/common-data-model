@@ -1,0 +1,204 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PreoperativeRiskFactor",
+  "name": "AIC_PreoperativeRiskFactor",
+  "title": "Preoperative Risk Factor",
+  "status": "draft",
+  "description": "Repesents a risk factor evaluated before operations e.g. tendency for thrombosis, life threatining drug reaction, etc.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "Type of risk factor",
+        "definition": "Code indicating the risk factor"
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:aicRiskFactorCode",
+        "path": "Observation.code.coding",
+        "sliceName": "aicRiskFactorCode",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "description": "List of important risk factors",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/preoperative-risk-factors"
+        }
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisodeEncounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "Existence of risk factor",
+        "definition": "If the indicated risk factor exists or not.",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code.coding.code"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.component:isCritical",
+        "path": "Observation.component",
+        "sliceName": "isCritical",
+        "short": "Is this risk factor critical?",
+        "definition": "Is this risk factor critical ?",
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:isCritical.code.coding",
+        "path": "Observation.component.code.coding",
+        "short": "Is this risk critical (life threating)",
+        "definition": "Is this risk critical (life threating)",
+        "min": 1,
+        "max": "1",
+        "fixedCoding": {
+          "system": "http://snomed.info/sct",
+          "code": "246112005"
+        }
+      },
+      {
+        "id": "Observation.component:isCritical.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:certainity",
+        "path": "Observation.component",
+        "sliceName": "certainity",
+        "short": "Certainity of the risk",
+        "definition": "Certainity of the risk",
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:certainity.code",
+        "path": "Observation.component.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "246103008"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:certainity.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:certainity.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/risk-factor-certainities"
+        }
+      },
+      {
+        "id": "Observation.component:isPermanent",
+        "path": "Observation.component",
+        "sliceName": "isPermanent",
+        "short": "Is this risk permanent?",
+        "definition": "Is this risk permanent?",
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:isPermanent.code",
+        "path": "Observation.component.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260868000"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:isPermanent.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:isPermanent.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

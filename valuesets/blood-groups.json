@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "blood-groups",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/blood-groups",  
+  "version": "0.1",
+  "name": "Blood Groups",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes indicating the blood group of a patient (See https://loinc.org/LL2972-9/)",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "278147001",
+            "display": "O Rh(D) positive"
+          },
+          {
+            "code": "278148006",
+            "display": "O Rh(D) negative"
+          },
+          {
+            "code": "278150003",
+            "display": "B Rh(D) positive"
+          },
+          {
+            "code": "278153001",
+            "display": "B Rh(D) negative"
+          },
+		  {
+            "code": "278151004",
+            "display": "AB Rh(D) positive"
+          },
+		  {
+            "code": "278154007",
+            "display": "AB Rh(D) negative"
+          },
+		  {
+            "code": "278149003",
+            "display": "A Rh(D) positive"
+          },
+		  {
+            "code": "278152006",
+            "display": "A Rh(D) negative"
+          }
+        ]
+      }
+    ]
+  }
+}

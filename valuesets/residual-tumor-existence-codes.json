@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "residual-tumor-existence-codes",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/residual-tumor-existence-codes",  
+  "version": "0.1",
+  "name": "AICCELERATE Residual Tumor Existence",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of LOINC codes residual tumor existence",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+		  {
+            "code": "LA26542-3",
+            "display": "R0 - Complete resection, margins histologically negative, no residual tumor left after resection (primary tumor, regional nodes)"
+          },
+		  {
+            "code": "LA26543-1",
+            "display": "R1 - Incomplete resection, margins histologically involved, microscopic tumor remains after resection of gross disease (primary tumor, regional nodes"
+          },
+		  {
+            "code": "LA26544-9",
+            "display": "R2 - Incomplete resection, margins macroscopically involved or gross disease remains after subtotal resection (eg primary tumor, regional nodes, or liver metastasis)"
+          }
+        ]
+      }
+    ]
+  }
+}

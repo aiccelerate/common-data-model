@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "health-behaviour-frequencies",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/health-behaviour-frequencies",  
+  "version": "0.1",
+  "name": "AICCELERATE Health Behaviour Frequency Codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "LOINC codes to indicate health behaviour status/frequency (other than smoking) in AICCELERATE.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+          {
+            "code": "LA28391-3",
+            "display": "Current every day user"
+          },
+          {
+            "code": "LA28392-1",
+            "display": "Current some day user"
+          },
+          {
+            "code": "LA28393-9",
+            "display": "Former user"
+          },
+		  {
+            "code": "LA4519-0",
+            "display": "Never user"
+          },
+		  {
+            "code": "LA4489-6",
+            "display": "Unknown"
+          }
+        ]
+      }
+    ]
+  }
+}

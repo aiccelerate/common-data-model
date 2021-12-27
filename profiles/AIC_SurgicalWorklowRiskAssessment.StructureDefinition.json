@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SurgicalWorkflowRiskAssessment",
+  "name": "AIC_SurgicalWorkflowRiskAssessment",
+  "title": "Surgical Workflow Risk Assessment",
+  "status": "draft",
+  "description": "This is the  profile that represents a risk assessment/prediction done by SHCP Engine within surgical workflow (Pilot 1) e.g., risk of sepsis after operation, risk of operation cancellation.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "RiskAssessment",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SHCPRiskAssessment",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RiskAssessment.prediction.outcome",
+        "path": "RiskAssessment.prediction.outcome",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/surgical-workflow-risk-assesments"
+        }
+      }
+    ]
+  }
+}

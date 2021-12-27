@@ -1,0 +1,28 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ProcedureRelatedWithSurgicalWorkflow",
+  "name": "AIC_ProcedureRelatedWithSurgicalWorkflow",
+  "title": "Procedure Related with Surgical Workflow",
+  "status": "draft",
+  "description": "Provides information about a non-surgical procedure performed on the patient that can be related with the surgical workflow",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.code.coding:aicProcedureCode",
+        "path": "Procedure.code.coding",
+        "sliceName": "aicProcedureCode",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/procedures-related-with-surgical-workflow"
+        }
+      }
+    ]
+  }
+}

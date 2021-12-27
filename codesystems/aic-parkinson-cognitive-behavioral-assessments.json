@@ -1,0 +1,131 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "parkinson-cognitive-behavioral-assessments", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-cognitive-behavioral-assessments",
+  "version": "0.1",
+  "name": "AICCELERATE Parkinson Cognitive or Behavioral Assessments",
+  "title": "AICCELERATE Parkinson Cognitive or Behavioral Assessments",
+  "status": "draft",  
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of custom codes defined within AICCELERATE project parkinson related cognitive or behavioral assessments",
+  "caseSensitive": true,
+  "content": "complete",  
+  "concept": [
+          {
+				"code": "pd-cfrs",
+				"display": "The Parkinson's Disease - Cognitive Functional Rating Scale (PD-CFRS)"
+			},
+			{
+				"code": "pd-mci",
+				"display": "Parkinson's Disease–Mild Cognitive Impairment (PD-MCI)"
+			},
+			{
+				"code": "sas",
+				"display": "Starkstein Apathy Scale (SAS)"
+			},
+			{
+				"code": "pas",
+				"display": "Parkinson Anxiety Scale (PAS)"
+			},
+			{
+				"code": "bis-11",
+				"display": "Barratt Impulsiveness Scale-11"
+			},
+			{
+				"code": "sogs",
+				"display": "The South Oaks Gambling Screen (SOGS) score"
+			},
+			{
+				"code": "quip-rs",
+				"display": "Impulsive-Compulsive Disorders in PD-Rating Scale (QUIP-RS)"
+			},
+			{
+				"code": "npi",
+				"display": "Neuropsychological Inventory (NPI)"
+			},
+			{
+				"code": "tmt-a",
+				"display": "Trial Making Test (TMT) Part A Z-score"
+			},
+			{
+				"code": "tmt-b",
+				"display": "Trial Making Test (TMT) Part B Z-score"
+			},
+			{
+				"code": "tmt",
+				"display": "Trial Making Test (TMT) Z-score"
+			},
+			{
+				"code": "sdmt",
+				"display": "Symbol Digit Modality Test(SDMT) Z-score"
+			},
+			{
+				"code": "verb-flu-a",
+				"display": "Verbal Fluency Test - Alternate form Z-score"
+			},
+			{
+				"code": "verb-flu-si",
+				"display": "Verbal Fluency Test - Shifting index Z-score"
+			},
+			{
+				"code": "stroop-t",
+				"display": "Stroop Test-time Z-score"
+			},
+			{
+				"code": "stroop-e",
+				"display": "Stroop Test - error Z-score"
+			},
+			{
+				"code": "cdt",
+				"display": "Clock Drowing Test (CDT) Z-score"
+			},
+			{
+				"code": "verb-flu-ph",
+				"display": "Verbal Fluency Test- Phonemice Z-score"
+			},
+			{
+				"code": "rocf-c",
+				"display": "Rey–Osterrieth complex figure test(ROCF) Copying Z-score"
+			},
+			{
+				"code": "bjlot",
+				"display": "Benton Judgment of Line Orientation Test (BJLOT) Z-score"
+			},
+			{
+				"code": "vosp",
+				"display": "Visual Object and Space Perception Battery (VOSP) (Incomplete Letters) Z-score"
+			},
+			{
+				"code": "wpat",
+				"display": "Word paired associated test (WPAT) Z-score"
+			},
+			{
+				"code": "rcof-d",
+				"display": "Rey–Osterrieth complex figure test(ROCF) delayed recall Z-score"
+			},
+			{
+				"code": "bab-t",
+				"display": "Prose memory (PM) test Z-score"
+			},
+			{
+				"code": "verb-flu-s",
+				"display": "Verbal Fluency Test- Semantic form Z-score"
+			},
+			{
+				"code": "bnt",
+				"display": "Boston Naming test Z-score"
+			}
+  ]
+}

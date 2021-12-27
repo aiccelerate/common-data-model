@@ -1,0 +1,85 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalDiagnosticStudyReport",
+  "name": "AIC_PediatricNeurooncologicalDiagnosticStudyReport",
+  "title": "Pediatric Neurooncological Diagnostic Study Report",
+  "status": "draft",
+  "description": "It is a base profile to represent a performed diagnostic study based on a specific order for a patient.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 1 - Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.category:aicDiagnosticStudyCategoryCode",
+        "path": "DiagnosticReport.category",
+        "sliceName": "aicDiagnosticStudyCategoryCode",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/diagnostic-study-categories"
+        }
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HospitalDepartment",
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalPractitionerRole"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pediatric-neurooncological-observations",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/pediatric-neurooncological-observations",  
+  "version": "0.1",
+  "name": "AICCELERATE Pediatric Neurooncological Observations",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of LOINC codes for other observations (apart from lab results) related with pediatric oncology",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+		  {
+            "code": "84892-9",
+            "display": "Residual tumor existence"
+          },
+		  {
+            "code": "21889-1",
+            "display": "Tumor size"
+          },
+		  {
+            "code": "88040-1",
+            "display": "Response to cancer treatment"
+          },
+		  {
+            "code": "62238-1",
+            "display": "Kidney function - Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
+          },
+		  {
+            "code": "6616-7",
+            "display": "Visual acuity log MAR Eye - right"
+          },
+		  {
+            "code": "6617-5",
+            "display": "Visual acuity log MAR Eye - left"
+          },
+		  {
+            "code": "89015-2",
+            "display": "Hearing function measured by pure-tone audiometry (PTA)"
+          }
+        ]
+      }
+    ]
+  }
+}

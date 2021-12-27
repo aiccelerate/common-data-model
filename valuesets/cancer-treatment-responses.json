@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cancer-treatment-responses",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/cancer-treatment-responses",  
+  "version": "0.1",
+  "name": "AICCELERATE Responses to Cancer Treatment",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of LOINC codes for responses to cancer treatment",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+		  {
+            "code": "LA28366-5",
+            "display": "Complete response"
+          },
+		  {
+            "code": "LA28369-9",
+            "display": "Partial response"
+          },
+		  {
+            "code": "LA28371-5",
+            "display": "Stable disease"
+          },
+		  {
+            "code": "LA28370-7",
+            "display": "Progressive disease"
+          },
+		  {
+            "code": "LA9348-9",
+            "display": "Not assessed"
+          }
+        ]
+      }
+    ]
+  }
+}

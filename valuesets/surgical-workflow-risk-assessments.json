@@ -1,0 +1,137 @@
+{
+  "resourceType": "ValueSet",
+  "id": "surgical-workflow-risk-assessments",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/surgical-workflow-risk-assessments",  
+  "version": "0.1",
+  "name": "AICCELERATE Risk Assessments for Surgical Workflow",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for risk assessments done in Surgical Workflow within AICCELERATE Pilot 1",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "29242007",
+            "display": "Operation cancellation"
+          },
+          {
+            "code": "439569004",
+            "display": "Resuscitation"
+          },
+          {
+            "code": "406444002",
+            "display": "Laryngeal spasm"
+          },
+          {
+            "code": "112648003",
+            "display": "Massive bleeding"
+          },
+          {
+            "code": "68052005",
+            "display": "Pulmonary Aspiration"
+          },
+		  {
+            "code": "233604007",
+            "display": "Pneumonia"
+          },
+		  {
+            "code": "14669001",
+            "display": "Acute renal failure syndrome"
+          },
+		  {
+            "code": "22298006",
+            "display": "Myocardial infarctation"
+          },
+		  {
+            "code": "261554009",
+            "display": "Reoperation"
+          },
+		  {
+            "code": "397945004",
+            "display": "Intensive Care Unit (ICU) admission"
+          },
+		  {
+            "code": "16983000",
+            "display": "Death in hospital"
+          },
+		  {
+            "code": "91302008",
+            "display": "Sepsis"
+          },
+		  {
+            "code": "373945007",
+            "display": "Pericardial effusion"
+          },
+		  {
+            "code": "60046008",
+            "display": "Pleural effusion"
+          },
+		  {
+            "code": "84114007",
+            "display": "Cardiac insufficiency"
+          },
+		  {
+            "code": "405619009",
+            "display": "Neurological event"
+          },
+		  {
+            "code": "429098002",
+            "display": "Thromboembolism of vein"
+          },
+		  {
+            "code": "40733004",
+            "display": "Infection"
+          },
+		  {
+            "code": "271299001:418775008=1003700002",
+            "display": "Patient's condition worsened based on Sequential Organ Failure Assessment (qSOFA) score"
+          },
+		  {
+            "code": "271299001:418775008=445627002",
+            "display": "Patient's condition worsened based on NEWS score"
+          },
+		  {
+            "code": "2776000",
+            "display": "Delirium"
+          },
+		  {
+            "code": "73335002",
+            "display": "Increased nausea and vomiting"
+          },
+		  {
+            "code": "107401000119105",
+            "display": "Acute postoperative pain"
+          },
+		  {
+            "code": "230145002",
+            "display": "Difficulty in breathing"
+          },
+		  {
+            "code": "422773005",
+            "display": "Hemodynamic instability"
+          },
+		  {
+            "code": "162182005",
+            "display": "Diuresis"
+          }
+        ]
+      }
+    ]
+  }
+}

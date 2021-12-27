@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "pediatric-palliative-care-assessments", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/pediatric-palliative-care-assessments",
+  "version": "0.1",
+  "name": "AICCELERATE Pediatric Palliative Care Assessments",
+  "title": "AICCELERATE Pediatric Palliative Care Assessments",
+  "status": "draft",  
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of custom codes defined within AICCELERATE project for pediatric palliative care assessments",
+  "caseSensitive": true,
+  "content": "complete",  
+  "concept": [
+         {
+				"code": "pedsql",
+				"display": "Pediatric Quality of Life Inventory (PEDS-QL)"
+			},
+			{
+				"code": "pqol",
+				"display": "Perceived Quality of Life Scale"
+			},
+			{
+				"code": "zarit",
+				"display": "Zarit scale of caregiver burden"
+			},
+			{
+				"code": "dme-c",
+				"display": "Caregiver's emotional discomfort scale"
+			}
+  ]
+}

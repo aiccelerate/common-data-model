@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "health-behaviours",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/health-behaviours",  
+  "version": "0.1",
+  "name": "AICCELERATE Health Behaviours",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "LOINC codes for health behaviours (other than smoking) evaluated in AICCELERATE.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+          {
+            "code": "88031-0",
+            "display": "Other nicotin products use"
+          },
+          {
+            "code": "11331-6",
+            "display": "Alcohol use"
+          },
+          {
+            "code": "11343-1",
+            "display": "Illicit drug use"
+          }
+        ]
+      }
+    ]
+  }
+}

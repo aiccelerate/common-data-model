@@ -1,0 +1,198 @@
+{
+  "resourceType": "ValueSet",
+  "id": "operation-flags",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/operation-flags",  
+  "version": "0.1",
+  "name": "AICCELERATE Operation Flags",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of codes for important administrative or clinical warnings about an surgical operation; a needed procedure, a finding, etc.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+		{
+        "system": "https://aiccelerate.eu/fhir/CodeSystem/operation-flags",        
+        "concept": [
+          {
+            "code": "day-case-surgery",
+            "display": "Day case surgery"
+          },
+		  {
+            "code": "preop-visit",
+            "display": "Preoperative policlinic visit needed"
+          },
+		  {
+            "code": "has-relative-to-pick",
+            "display": "Day surgery: patient has an adult relative or other friend who will pick him/her up from the hospital"
+          },
+		  {
+            "code": "has-adult-follow-up",
+            "display": "Day surgery: patient has adult follow-up until the next morning"
+          },
+		  {
+            "code": "hospitilized-abroad",
+            "display": "Hospitalization abroad over the past year"
+          },
+		  {
+            "code": "reduced-mobility-u100",
+            "display": "Ambulation is restricted under 100m"
+          },
+		  {
+            "code": "reduced-mobility-u1000",
+            "display": "Ambulation is restricted under 100m-1km"
+          },
+		  {
+            "code": "reduced-mobility-o1000",
+            "display": "Ambulation is restricted under over 1 km"
+          }
+		]
+	  },
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "40174006",
+            "display": "Isolation (procedure)"
+          },
+          {
+            "code": "183799004",
+            "display": "Inpatient stay 1 day (finding)"
+          },
+          {
+            "code": "398228004",
+            "display": "Anesthesia consultation (procedure)"
+          },
+          {
+            "code": "11429006",
+            "display": "Consultation (procedure)"
+          },
+		  {
+            "code": "52765003",
+            "display": "Intubation (procedure)"
+          },
+		  {
+            "code": "449360002",
+            "display": "On special diet (finding)"
+          },
+		  {
+            "code": "226010006",
+            "display": "Assisting with eating and drinking (procedure)"
+          },
+		  {
+            "code": "737286006",
+            "display": "Dental prosthetic device in situ (finding)"
+          },
+		  {
+            "code": "879862001",
+            "display": "Body piercing (finding)"
+          },
+		  {
+            "code": "341000119102",
+            "display": "Tattoo of skin (finding)"
+          },
+		  {
+            "code": "366248005",
+            "display": "Finding of appearance of denture (finding)"
+          },
+		  {
+            "code": "169741004",
+            "display": "Breast feeding (finding)"
+          },
+		  {
+            "code": "129839007",
+            "display": "At risk for falls (finding)"
+          },
+		  {
+            "code": "710803000",
+            "display": "Assistance with mobility (procedure)"
+          },
+		  {
+            "code": "433035000",
+            "display": "Bathing with assistance of hoist (procedure)"
+          },
+		  {
+            "code": "313420001",
+            "display": "Assisting with toileting (regime/therapy)"
+          },
+		  {
+            "code": "704444008",
+            "display": "Assisting with personal grooming (procedure)"
+          },
+		  {
+            "code": "8510008:42752001=29857009",
+            "display": "Reduced Mobility due to chest pain"
+          },
+		  {
+            "code": "8510008:42752001=10601006",
+            "display": "Reduced Mobility due to  pain in lower limb"
+          },
+		  {
+            "code": "8510008:42752001=267036007",
+            "display": "Reduced Mobility due to  dyspnea"
+          },
+		  {
+            "code": "8510008:42752001=238131007",
+            "display": "Reduced Mobility due to overweight"
+          },
+		  {
+            "code": "8510008:42752001=44695005",
+            "display": "Reduced Mobility due to paralysis"
+          },
+		  {
+            "code": "8510008:42752001=404684003",
+            "display": "Reduced Mobility due to any clinical finding"
+          },
+		  {
+            "code": "443663000",
+            "display": "Uses two crutches for walking (finding)"
+          },
+		  {
+            "code": "165255004",
+            "display": "Using zimmer frame (finding)"
+          },
+		  {
+            "code": "225612007",
+            "display": "Wheelchair bound (finding)"
+          },
+		  {
+            "code": "365112008",
+            "display": "Finding of walking aid use (finding)"
+          },
+		  {
+            "code": "232325008",
+            "display": "Chronic Deafness (disorder)"
+          },
+		  {
+            "code": "343087000",
+            "display": "Partial Deafness (disorder)"
+          },
+		  {
+            "code": "112089001",
+            "display": "Comprehension dysprosody (finding)"
+          },
+		  {
+            "code": "267095009",
+            "display": "Speech problem (finding)"
+          },
+		  {
+            "code": "95677002",
+            "display": "Disorder of vision (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

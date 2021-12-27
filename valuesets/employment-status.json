@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "employment-status",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/employment-status",  
+  "version": "0.1",
+  "name": "AICCELERATE Employment Status",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-16",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "Employment status of a patient (See https://loinc.org/LL1901-9/ ).",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://loinc.org",        
+        "concept": [
+			{
+				"code": "LA17956-6",
+				"display": "Unemployed"
+			},
+			{
+				"code": "LA17957-4",
+				"display": "Employed full time"
+			},
+			{
+				"code": "LA17958-2",
+				"display": "Employed part time"
+			},
+			{
+				"code": "LA17959-0",
+				"display": "Homemaker"
+			},
+			{
+				"code": "LA17960-8",
+				"display": "Retired due to age/preference"
+			},
+			{
+				"code": "LA17961-6",
+				"display": "Retired due to disability"
+			},
+			{
+				"code": "LA17962-4",
+				"display": "Medical leave of absence"
+			},
+			{
+				"code": "LA15276-1",
+				"display": "Student"
+			}
+        ]
+      }
+    ]
+  }
+}

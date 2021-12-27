@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "parkinson-related-risk-assessments",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/parkinson-related-risk-assessments",  
+  "version": "0.1",
+  "name": "AICCELERATE Risk Assessments for Parkinson Care",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for risk assessments done in Parkinson care scenario within AICCELERATE Pilot 2",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "32798002:246112005=24484000",
+            "display": "Transitioning from stable parkinson disease to advanced/unstable disease"
+          },
+          {
+            "code": "52448006",
+            "display": "Dementia"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "resourceType": "ValueSet",
+  "id": "patient-reported-conditions",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/patient-reported-conditions",  
+  "version": "0.1",
+  "name": "AICCELERATE Patient Reported Conditions",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for conditions reported by patient",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "49601007",
+            "display": "Cardiovascular disease"
+          },
+          {
+            "code": "368009",
+            "display": "Valvular Heart Disease"
+          },
+          {
+            "code": "38341003",
+            "display": "Hypertension"
+          },
+          {
+            "code": "22298006",
+            "display": "Myocardial infarction"
+          },
+		  {
+            "code": "53741008",
+            "display": "Coronary artery disease"
+          },
+		  {
+            "code": "84114007",
+            "display": "Cardiac insufficiency"
+          },		  
+		  {
+            "code": "698247007",
+            "display": "Cardiac arrhythmia"
+          },
+		  {
+            "code": "13213009",
+            "display": "Congenital heart disease"
+          },
+		  {
+            "code": "400047006",
+            "display": "Peripheral vascular disease"
+          },
+		  {
+            "code": "235856003",
+            "display": "Liver disease"
+          },
+		  {
+            "code": "59927004",
+            "display": "Hepatic insufficiency"
+          },
+		  {
+            "code": "19829001",
+            "display": "Lung disease"
+          },
+		  {
+            "code": "195967001",
+            "display": "Asthma"
+          },
+		  {
+            "code": "13645005",
+            "display": "Chronic obstructive pulmonary disease"
+          },
+		  {
+            "code": "426990007",
+            "display": "Dependence on home oxygen therapy"
+          },
+		  {
+            "code": "90708001",
+            "display": "Kidney disease"
+          },
+		  {
+            "code": "723188008",
+            "display": "Renal insufficiency"
+          },
+		  {
+            "code": "331000124109",
+            "display": "Hemodialysis"
+          },
+		  {
+            "code": "118940003",
+            "display": "Neurological disease"
+          },
+		  {
+            "code": "230690007",
+            "display": "Stroke"
+          },
+		  {
+            "code": "274100004",
+            "display": "Cerebral hemorrhage"
+          },
+		  {
+            "code": "62914000",
+            "display": "Cerebrovascular disorder"
+          },
+		  {
+            "code": "84757009",
+            "display": "Epilepsy"
+          },
+		  {
+            "code": "386807006",
+            "display": "Memory impairement"
+          },
+		  {
+            "code": "24700007",
+            "display": "Multiple sclerosis"
+          },
+		  {
+            "code": "49049000",
+            "display": "Parkinson's disease"
+          },
+		  {
+            "code": "129565002",
+            "display": "Myopathy"
+          },
+		  {
+            "code": "73211009",
+            "display": "Diabetes"
+          },
+		  {
+            "code": "170745003",
+            "display": "Diabetic on diet only"
+          },
+		  {
+            "code": "170746002",
+            "display": "Diabetic on oral treatment"
+          },
+		  {
+            "code": "170747006",
+            "display": "Diabetic on insulin"
+          },
+		  {
+            "code": "69896004",
+            "display": "Rheumatic disease"
+          },
+		  {
+            "code": "203082005",
+            "display": "Fibromyalgia"
+          },
+		  {
+            "code": "363346000",
+            "display": "Cancer disease"
+          },
+		  {
+            "code": "14304000",
+            "display": "Thyroid disease"
+          },
+		  {
+            "code": "40930008",
+            "display": "Hypothyroidism"
+          },
+		  {
+            "code": "34486009",
+            "display": "Hyperthyroidism"
+          },
+		   {
+            "code": "85919009",
+            "display": "Intestinal disease"
+          },
+		  {
+            "code": "24526004",
+            "display": "Inflamattory bowel disease"
+          },
+		  {
+            "code": "170903008",
+            "display": "On ostomoy treatment"
+          },
+		  {
+            "code": "128187005",
+            "display": "Vascular headache (including migraine)"
+          },
+		  {
+            "code": "414022008",
+            "display": "Blood disease"
+          },
+		  {
+            "code": "93143009",
+            "display": "Leukemia"
+          },
+		  {
+            "code": "271737000",
+            "display": "Anemia"
+          },
+		  {
+            "code": "302215000",
+            "display": "Thrombocytopenic disorder (low thrombocyte)"
+          },
+		  {
+            "code": "64779008",
+            "display": "Bleeding tendency"
+          },
+		  {
+            "code": "366219004",
+            "display": "Sensitive to bleeding wounds"
+          },
+		  {
+            "code": "111293003",
+            "display": "Venous thrombosis"
+          },
+		  {
+            "code": "59282003",
+            "display": "Pulmonary embolism"
+          }
+        ]
+      }
+    ]
+  }
+}

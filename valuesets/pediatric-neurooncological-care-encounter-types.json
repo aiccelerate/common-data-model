@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pediatric-neurooncological-care-encounter-types",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/pediatric-neurooncological-care-encounter-types",  
+  "version": "0.1",
+  "name": "AICCELERATE Pediatric Neuroonclogical Care Encounter Types",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for encounter types within a pediatric neurological care",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "183452005",
+            "display": "ER Visit (Emergency hospital admission)"
+          },
+          {
+            "code": "305828008",
+            "display": "Seen by pediatric neurology service"
+          },
+          {
+            "code": "305829000",
+            "display": "Seen by pediatric oncology service"
+          },
+          {
+            "code": "305827003",
+            "display": "Seen by pediatric service"
+          },
+		  {
+            "code": "305746007",
+            "display": "Seen by pediatric nurse"
+          },
+		   {
+            "code": "305899008",
+            "display": "Seen by pediatric surgery service"
+          },
+		   {
+            "code": "305354007",
+            "display": "Pediatric ward stay"
+          },
+		  {
+            "code": "305353001",
+            "display": "PICU Stay (Admission to PICU)"
+          }
+        ]
+      }
+    ]
+  }
+}

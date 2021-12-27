@@ -1,0 +1,60 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_MedicationUsed",
+  "name": "AIC_MedicationUsed",
+  "title": "Medication Used",
+  "status": "draft",
+  "description": "Represents the information about a medication used or being used by patient.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) and one of the base profiles that is commonly used in all three pilots; i) Pilot 1- Patient flow management for Emergency Room and Surgical units., ii) Pilot 2 - Chronic adult care – Parkinson’s disease, iii)  Palliative and chronic pediatric service delivery and patient workflow",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationStatement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationStatement.medication[x]",
+        "path": "MedicationStatement.medication[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Medication"
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/medications"
+        }
+      },
+      {
+        "id": "MedicationStatement.subject",
+        "path": "MedicationStatement.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.effective[x]",
+        "path": "MedicationStatement.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      }
+    ]
+  }
+}

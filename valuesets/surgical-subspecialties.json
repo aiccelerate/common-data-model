@@ -1,0 +1,101 @@
+{
+  "resourceType": "ValueSet",
+  "id": "surgical-subspecialties",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/surgical-subspecialties",  
+  "version": "0.1",
+  "name": "AICCELERATE Surgical Subspecialties",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for specialty fields in surgery (Codes under SNOMED-CT concept 394732004 Surgical Subspecialy)",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "408469009",
+            "display": "Breast surgery"
+          },
+          {
+            "code": "394603008",
+            "display": "Cardiothoracic surgery"
+          },
+          {
+            "code": "408464004",
+            "display": "Colorectal surgery"
+          },
+          {
+            "code": "418018006",
+            "display": "Dermatologic surgery"
+          },
+		  {
+            "code": "394604002",
+            "display": "Ear, nose and throat surgery"
+          },
+		  {
+            "code": "394609007",
+            "display": "General surgery"
+          },		  
+		  {
+            "code": "408474001",
+            "display": "Hepatobiliary and pancreatic surgery"
+          },
+		  {
+            "code": "394610002",
+            "display": "Neurosurgery"
+          },
+		  {
+            "code": "394594003",
+            "display": "Ophthalmology"
+          },
+		  {
+            "code": "394605001",
+            "display": "Oral surgery"
+          },
+		  {
+            "code": "394611003",
+            "display": "Plastic surgery"
+          },
+		  {
+            "code": "419321007",
+            "display": "Surgical oncology"
+          },
+		  {
+            "code": "408477008",
+            "display": "Transplantation surgery"
+          },
+		  {
+            "code": "394801008",
+            "display": "Trauma and orthopedics"
+          },
+		  {
+            "code": "408479006",
+            "display": "Upper gastrointestinal surgery"
+          },
+		  {
+            "code": "394612005",
+            "display": "Urology"
+          },
+		  {
+            "code": "408463005",
+            "display": "Vascular surgery"
+          }
+        ]
+      }
+    ]
+  }
+}

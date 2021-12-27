@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_MedicationAdministration",
+  "name": "AIC_MedicationAdministration",
+  "title": "Medication Administration",
+  "status": "draft",
+  "description": "Represents the information about a medication administered to patient within a clinical setting",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) and one of the base profiles that can be used generally for different scenarios. For the project it is used within the Pilot 1- Patient flow management for Emergency Room and Surgical units to represent medications administered to a patient during/before/after an operation withing operation episode of care.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationAdministration",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationAdministration.medication[x]",
+        "path": "MedicationAdministration.medication[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Medication"
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/medications"
+        }
+      },
+      {
+        "id": "MedicationAdministration.subject",
+        "path": "MedicationAdministration.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

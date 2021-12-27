@@ -1,0 +1,202 @@
+{
+  "resourceType": "ValueSet",
+  "id": "preoperative-risk-factors",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/preoperative-risk-factors",  
+  "version": "0.1",
+  "name": "AICCELERATE Preoperative Risk Factors",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of codes for important preoperative risk factors",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "62014003",
+            "display": "Adverse reaction caused by drug (disorder)"
+          },
+		  {
+            "code": "81711008",
+            "display": "Hemolytic anemia caused by drugs (disorder) (or blood cell effect of medication)"
+          },
+		  {
+            "code": "62014003+366667001",
+            "display": "Adverse skin reaction caused by drug"
+          },
+		  {
+            "code": "609328004",
+            "display": "Allergy"
+          },
+		  {
+            "code": "439127006",
+            "display": "Thrombosis disorder (tendency for thrombosis)"
+          },
+		  {
+            "code": "64779008",
+            "display": "Blood coagulation disorder"
+          },
+		  {
+            "code": "234532001",
+            "display": "Immunodeficiency disorder"
+          },
+		  {
+            "code": "281694009",
+            "display": "Other Risk"
+          },
+		  {
+            "code": "365646008",
+            "display": "Blood group antibodies (finding)"
+          },
+		  {
+            "code": "250373003",
+            "display": "Blood transfusion finding"
+          },
+		  {
+            "code": "737294004",
+            "display": "Organ Transplant Present"
+          },
+		  {
+            "code": "441509002",
+            "display": "Cardiac pacemaker in situ"
+          },
+		  {
+            "code": "397578001",
+            "display": "Device in situ"
+          },
+		  {
+            "code": "737277001",
+            "display": "Prosthetic heart valve in situ"
+          },
+		  {
+            "code": "408708000",
+            "display": "Stended artery"
+          },
+		  {
+            "code": "722810000",
+            "display": "Prosthesis in situ"
+          },
+		  {
+            "code": "1156073005",
+            "display": "Blocked catheter"
+          },
+		  {
+            "code": "16470007",
+            "display": "Electrode present"
+          },
+		  {
+            "code": "303274001",
+            "display": "Artificial material (foreign object) present"
+          },
+		  {
+            "code": "182890002",
+            "display": "Patient requests alternative treatment (finding)"
+          },
+		  {
+            "code": "1002253002",
+            "display": "Deviation in vaccinations"
+          },
+		  {
+            "code": "248004009",
+            "display": "Physical aggression (violence in treatment situation)"
+          },
+		  {
+            "code": "5002000",
+            "display": "Inhalant dependence"
+          },
+		  {
+            "code": "277843001",
+            "display": "Behavioral Concern"
+          },
+		  {
+            "code": "118956008",
+            "display": "Abnormal anatomy"
+          },
+		  {
+            "code": "385971003",
+            "display": "Dialysis care"
+          },
+		  {
+            "code": "737350008",
+            "display": "Needs assistance with communication (finding)"
+          },
+		  {
+            "code": "310247005",
+            "display": "Family history: Thrombosis (situation)"
+          },
+		  {
+            "code": "366667001:255234002=399097000",
+            "display": "Skin reaction after anesthesia procedure"
+          },
+		  {
+            "code": "718446005",
+            "display": "Difficulty with mask ventilation and tracheal intubation"
+          },
+		  {
+            "code": "422587007:255234002=387713003",
+            "display": "Nausea after surgical procedure"
+          },
+		  {
+            "code": "107401000119105",
+            "display": "Acute postoperative pain"
+          },
+		  {
+            "code": "57177007:246090004=419914000",
+            "display": "Family history of anesthetic reaction"
+          },
+		  {
+            "code": "416380006",
+            "display": "Risk of airborne transmission"
+          },
+		  {
+            "code": "461551000124100",
+            "display": "Risk of droplet transmission"
+          },
+		  {
+            "code": "420193003",
+            "display": "Risk of transdermal transmission"
+          },
+		  {
+            "code": "24800002",
+            "display": "Carrier state required"
+          },
+		  {
+            "code": "444107005",
+            "display": "Exposure to communicable disease"
+          }
+        ]
+      },
+	  {
+        "system": "https://aiccelerate.eu/fhir/CodeSystem/preoperative-risk-factors",        
+		"concept": [
+		  {
+            "code": "rare-disease",
+            "display": "Rare disease of particular concern"
+          },
+		  {
+            "code": "attention-medication",
+            "display": "Medication requiring special attention"
+          },
+		  {
+            "code": "restriction-treatment",
+            "display": "Restriction on treatment"
+          }		  
+		]
+	  }
+    ]
+  }
+}

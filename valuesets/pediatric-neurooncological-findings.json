@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pediatric-neurooncological-findings",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/pediatric-neurooncological-findings",  
+  "version": "0.1",
+  "name": "AICCELERATE Pediatric Neurooncological Findings or Symptoms",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for findings or symptoms for pediatric neurooncological workflow",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "25064002",
+            "display": "Headache"
+          },
+          {
+            "code": "407621003",
+            "display": "Daily seizures"
+          },
+          {
+            "code": "422587007",
+            "display": "Nausea"
+          },
+          {
+            "code": "7973008",
+            "display": "Vision disturbances"
+          },
+		  {
+            "code": "699281009",
+            "display": "Motor weakness"
+          },
+		  {
+            "code": "247322000",
+            "display": "Sensory impairement"
+          },		  
+		  {
+            "code": "9650008",
+            "display": "Constant squint"
+          },
+		  {
+            "code": "387603000",
+            "display": "Balance Impairment"
+          }
+        ]
+      }
+    ]
+  }
+}

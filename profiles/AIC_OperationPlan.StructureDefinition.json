@@ -1,0 +1,163 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationPlan",
+  "name": "AIC_OperationPlan",
+  "title": "Operation Plan",
+  "status": "draft",
+  "description": "A plan or schedule for a surgical operation for a patient",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "definition": "Status of the plan (draft | active  | revoked | completed)\r\n    - draft: Used for any draft version of the plan\r\n    - active: Used when plan is activated \r\n    - revoked: Used when plan is revoked by the practitioner who does it (do not use for cancelled operations)\r\n   - completed: Used when this plan is no longer active as it is already done or operation is cancelled"
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "definition": "Whether the request is a proposal, plan, or order? (proposal | plan | order)\r\n    proposal: Indicates that patient is added to the operation queue but scheduling is not done yet\r\n    plan: Indicates that this is a interim plan for the operation or its phases (or suggestion of plan by SHCP)\r\n    order: Indicates that this record shows the final approved scheduled operation or its phases"
+      },
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 2
+      },
+      {
+        "id": "ServiceRequest.category:aicSurgicalProcedure",
+        "path": "ServiceRequest.category",
+        "sliceName": "aicSurgicalProcedure",
+        "definition": "Indicates that this is a plan/proposal/order for a surgical procedure",
+        "min": 1,
+        "max": "1",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "387713003"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ServiceRequest.category:aicSurgicalSubspecialty",
+        "path": "ServiceRequest.category",
+        "sliceName": "aicSurgicalSubspecialty",
+        "definition": "A code that classifies the surgery in terms of sub specialty e.g. General Surgery, Breast Surgery",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "description": "Classification of the surgery in terms of specialty",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/surgical-subspecialties"
+        }
+      },
+      {
+        "id": "ServiceRequest.category:aicSurgicalSubspecialty.coding",
+        "path": "ServiceRequest.category.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "definition": "An ICD-10-PCS code that identifies the main surgical procedure",
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.code.coding",
+        "path": "ServiceRequest.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.code.coding:ICD10PCSCode",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "ICD10PCSCode",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/icd-10-procedures"
+        }
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.encounter",
+        "path": "ServiceRequest.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisodeEncounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "path": "ServiceRequest.authoredOn",
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.locationReference",
+        "path": "ServiceRequest.locationReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Location",
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HospitalUnit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.reasonReference",
+        "path": "ServiceRequest.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Condition"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

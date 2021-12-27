@@ -1,0 +1,59 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "operation-flags", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/operation-flags",
+  "version": "0.1",
+  "name": "AICCELERATE Operation Flags",
+  "title": "AICCELERATE Operation Flags",
+  "status": "draft",  
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of custom codes defined within AICCELERATE project for important flags for surgical operation",
+  "caseSensitive": true,
+  "content": "complete",  
+  "concept": [
+		  {
+            "code": "day-case-surgery",
+            "display": "Day case surgery"
+          },
+		  {
+            "code": "preop-visit",
+            "display": "Preoperative policlinic visit needed"
+          },
+		  {
+            "code": "has-relative-to-pick",
+            "display": "Day surgery: patient has an adult relative or other friend who will pick him/her up from the hospital"
+          },
+		  {
+            "code": "has-adult-follow-up",
+            "display": "Day surgery: patient has adult follow-up until the next morning"
+          },
+		  {
+            "code": "hospitilized-abroad",
+            "display": "Hospitalization abroad over the past year"
+          },
+		  {
+            "code": "reduced-mobility-u100",
+            "display": "Ambulation is restricted under 100m"
+          },
+		  {
+            "code": "reduced-mobility-u1000",
+            "display": "Ambulation is restricted under 100m-1km"
+          },
+		  {
+            "code": "reduced-mobility-o1000",
+            "display": "Ambulation is restricted under over 1 km"
+          }
+  ]
+}

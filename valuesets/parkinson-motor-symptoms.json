@@ -1,0 +1,82 @@
+{
+  "resourceType": "ValueSet",
+  "id": "parkinson-motor-symptoms",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/parkinson-motor-symptoms",  
+  "version": "0.1",
+  "name": "AICCELERATE Parkinson Motor Symptoms",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of important symptoms in Parkinson disease related with motor function.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "26079004",
+            "display": "Tremor"
+          },
+          {
+            "code": "9748009",
+            "display": "Dyskinesia"
+          },
+          {
+            "code": "427488005",
+            "display": "Wearing-off"
+          },
+          {
+            "code": "443544006",
+            "display": "Freezing of gait"
+          },
+		  {
+            "code": "416240000",
+            "display": "Postural Balance"
+          },
+		  {
+            "code": "399317006",
+            "display": "Bradykinesia"
+          },
+		  {
+            "code": "271587009",
+            "display": "Stiffness/Rigidity"
+          },
+		  {
+            "code": "15802004",
+            "display": "Dystonia"
+          },
+		  {
+            "code": "102491009",
+            "display": "Immobility"
+          }
+        ]
+      },
+	  {
+		"system": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-motor-symptoms",        
+		"concept": [
+			{
+				"code": "off-time",
+				"display": "Off time"
+			},
+			{
+				"code": "fluctuations",
+				"display": "Fluctuations"
+			}
+		]
+	  }
+    ]
+  }
+}

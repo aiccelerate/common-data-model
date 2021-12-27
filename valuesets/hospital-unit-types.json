@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hospital-unit-types",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/hospital-unit-types",  
+  "version": "0.1",
+  "name": "AICCELERATE Hospital Unit Types",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for type of outpatient and inpatient units within a hospital",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+		"filter": [
+		  {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "224884006"
+          }
+		]
+	  },
+	  {
+        "system": "http://snomed.info/sct",        
+		"filter": [
+		  {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "33022008"
+          }
+		]
+	  }
+    ]
+  }
+}

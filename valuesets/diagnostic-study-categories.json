@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "diagnostic-study-categories",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/diagnostic-study-categories",  
+  "version": "0.1",
+  "name": "AICCELERATE Diagnostic Study Categories",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for categories of diagnostic studies in AICCELERATE scnearios",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "108252007",
+            "display": "Laboratory procedure"
+          },
+          {
+            "code": "363679005",
+            "display": "Imaging"
+          },
+          {
+            "code": "409063005",
+            "display": "Counselling"
+          }
+        ]
+      }
+    ]
+  }
+}

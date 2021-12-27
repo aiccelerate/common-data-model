@@ -1,0 +1,97 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pediatric-palliative-care-procedures",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/pediatric-palliative-care-procedures",  
+  "version": "0.1",
+  "name": "AICCELERATE Pediatric Palliative Care Procedures",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of some important procedures used within pediatric palliative care",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/ex-icd-10-procedures",        
+        "concept": [
+          {
+            "code": "0D9680Z",
+            "display": "Drainage of Stomach with Drainage Device, Via Natural or Artificial Opening Endoscopic (Nasogastric feeding tube)"
+          },
+          {
+            "code": "5A19054",
+            "display": "Respiratory Ventilation, Single, Nonmechanical (Non-invasive ventilation)"
+          },
+          {
+            "code": "5A1935Z",
+            "display": "Respiratory Ventilation, Less than 24 Consecutive Hours"
+          },
+          {
+            "code": "5A1945Z",
+            "display": "Respiratory Ventilation, 24-96 Consecutive Hours"
+          },
+		  {
+            "code": "5A1955Z",
+            "display": "Respiratory Ventilation, Greater than 96 Consecutive Hours"
+          },
+		  {
+            "code": "3E0F7SF",
+            "display": "Introduction of Other Gas into Respiratory Tract, Via Natural or Artificial Opening (Chronic Oxygenotherapy)"
+          },
+		  {
+            "code": "0B110F4",
+            "display": "Bypass Trachea to Cutaneous with Tracheostomy Device, Open Approach"
+          },
+		  {
+            "code": "0B113F4",
+            "display": "Bypass Trachea to Cutaneous with Tracheostomy Device, Percutaneous Approach"
+          },
+		  {
+            "code": "0B114F4",
+            "display": "Bypass Trachea to Cutaneous with Tracheostomy Device, Percutaneous Endoscopic"
+          },
+		  {
+			"code": "0DV14ZZ",
+			"display": "Restriction of upper esophagus, percutaneous endoscopic approach"
+		  },
+		  {
+			"code": "0DV23ZZ",
+			"display": "Restriction of middle esophagus, percutaneous approach"
+		  },
+		  {
+			"code": "0DV54ZZ",
+			"display": "Restriction of esophagus, percutaneous endoscopic approach"
+		  },
+		  {
+			"code": "0D164J4",
+			"display": "Bypass Stomach to Cutaneous with Synthetic Substitute, Percutaneous Endoscopic Approach"
+		  },
+		  {
+			"code": "0DH60UZ",
+			"display": "Insertion of Feeding Device into Stomach, Open Approach"
+		  },
+		  {
+			"code": "0JH80VZ",
+			"display": "Insertion of infusion pump into abdomen subcutaneous tissue and fascia, open approach"
+		  },
+		  {
+			"code": "00HU33Z",
+			"display": "Insertion of infusion device into spinal canal, percutaneous approach"
+		  }		  
+        ]
+      }
+    ]
+  }
+}

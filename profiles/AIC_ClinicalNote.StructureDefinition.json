@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ClinicalNote",
+  "name": "AIC_ClinicalNote",
+  "title": "Clinical Note",
+  "status": "draft",
+  "description": "Represents an unstructured clinical note that is important that can be processed to extract some structured information within AICCELERATE use cases.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/).  It is used in Pilot 2 - Chronic adult care – Parkinson’s disease to represent physicians' notes about a patient regarding parkinson care.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "min": 1,
+        "fixedCode": "text/plain"
+      },
+      {
+        "id": "DocumentReference.content.attachment.language",
+        "path": "DocumentReference.content.attachment.language",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.content.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.content.attachment.creation",
+        "path": "DocumentReference.content.attachment.creation",
+        "min": 1
+      }
+    ]
+  }
+}
