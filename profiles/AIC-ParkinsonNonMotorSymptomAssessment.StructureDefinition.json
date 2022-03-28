@@ -1,0 +1,89 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonNonMotorSymptomAssessment",
+  "name": "AIC-ParkinsonNonMotorSymptomAssessment",
+  "title": "Parkinson Non-motor Symptom Assessment",
+  "status": "draft",
+  "description": "An observation for the existence or assesment of a non-motor function related symptom for a specific period (e.g. speech disorder, sleep disorder, etc)",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 2 - Chronic adult care – Parkinson’s disease.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:aicNonMotorSymptomCode",
+        "path": "Observation.code.coding",
+        "sliceName": "aicNonMotorSymptomCode",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/parkins-non-motor-symptoms"
+        }
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity",
+        "path": "Observation.value[x]",
+        "sliceName": "valueQuantity",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "fixedQuantity": {
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "binding": {
+          "strength": "extensible",
+          "description": "Methods for non motor assessments",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/parkinson-non-motor-symptom-assessment-methods"
+        }
+      }
+    ]
+  }
+}

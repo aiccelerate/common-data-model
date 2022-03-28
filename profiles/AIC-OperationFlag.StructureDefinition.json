@@ -1,0 +1,77 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationFlag",
+  "name": "AIC-OperationFlag",
+  "title": "Operation Flag",
+  "status": "draft",
+  "description": "Administrative or clinical warnings about the planned operation e.g. day case surgery, overnight stay, etc",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Flag",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Flag",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Flag.category",
+        "path": "Flag.category",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible"
+        }
+      },
+      {
+        "id": "Flag.code.coding",
+        "path": "Flag.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Flag.code.coding:aicOperationFlagCode",
+        "path": "Flag.code.coding",
+        "sliceName": "aicOperationFlagCode",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/operation-flags"
+        }
+      },
+      {
+        "id": "Flag.subject",
+        "path": "Flag.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Flag.encounter",
+        "path": "Flag.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationEpisodeEncounter"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

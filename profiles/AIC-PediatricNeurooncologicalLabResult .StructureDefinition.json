@@ -1,0 +1,28 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalLabResult",
+  "name": "AIC-PediatricNeurooncologicalLabResult",
+  "title": "Pediatric Neurooncological Lab Result",
+  "status": "draft",
+  "description": "Represents a result of a laboratory test for a patient within the pediatric neurooncology workflow in AICCELERATE Pilot 3",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 2 - Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-LabResult",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding:labResultLoincCode",
+        "path": "Observation.code.coding",
+        "sliceName": "labResultLoincCode",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu//fhir/ValueSet/pediatric-neurooncological-lab-results"
+        }
+      }
+    ]
+  }
+}

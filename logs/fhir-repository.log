@@ -1,0 +1,13 @@
+2022-03-28_14:52:23.375 [main] INFO  i.o.r4.config.FhirR4Configurator - Reading base FHIR foundation resources (base standard) to start configuration of onFhir server ...
+2022-03-28_14:52:23.393 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type StructureDefinition from default path 'definitions.json.zip'
+2022-03-28_14:52:24.156 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type StructureDefinition from default path 'definitions.json.zip'
+2022-03-28_14:52:24.358 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type StructureDefinition from default path 'definitions.json.zip'
+2022-03-28_14:52:24.475 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type StructureDefinition from default path 'definitions.json.zip'
+2022-03-28_14:52:24.559 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type SearchParameter from default path 'definitions.json.zip'
+2022-03-28_14:52:24.754 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type ValueSet,CodeSystem from default path 'definitions.json.zip'
+2022-03-28_14:52:25.059 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type ValueSet,CodeSystem from default path 'definitions.json.zip'
+2022-03-28_14:52:25.335 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type ValueSet,CodeSystem from default path 'definitions.json.zip'
+2022-03-28_14:52:25.557 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type OperationDefinition from default path 'definitions.json.zip'
+2022-03-28_14:52:26.029 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading resources of type CompartmentDefinition from default path 'definitions.json.zip'
+2022-03-28_14:52:26.352 [main] INFO  i.o.r4.config.FhirR4Configurator - Reading FHIR foundation resources to start configuration of onFhir server ...
+2022-03-28_14:52:26.352 [main] INFO  io.onfhir.api.util.IOUtil$ - Reading a CapabilityStatement from 'conf/aic-health-data-store-capability-statement.json'

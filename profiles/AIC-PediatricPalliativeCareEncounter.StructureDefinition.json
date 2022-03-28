@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricPalliativeCareEncounter",
+  "name": "AIC-PediatricPalliativeCareEncounter",
+  "title": "Pediatric Palliative Care Encounter",
+  "status": "draft",
+  "description": "Represents the hospitilization encounters (e.g. ward stay, ICU stay) as well as practitioner visits within the pediatric palliative care workflow",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 3 - Optimisation of palliative and chronic paediatric service delivery and patient workflow for Cerebral Palsy patients",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter.type",
+        "path": "Encounter.type",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Encounter.type:aicEncounterType",
+        "path": "Encounter.type",
+        "sliceName": "aicEncounterType",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu//fhir/ValueSet/pediatric-palliative-care-encounter-types"
+        }
+      },
+      {
+        "id": "Encounter.type:aicEncounterType.coding",
+        "path": "Encounter.type.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition",
+        "path": "Encounter.hospitalization.dischargeDisposition",
+        "min": 1,
+        "binding": {
+          "strength": "required"
+        }
+      }
+    ]
+  }
+}

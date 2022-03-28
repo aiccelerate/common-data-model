@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SpeedOfGait",
+  "name": "AIC-SpeedOfGait",
+  "title": "Speed Of Gait",
+  "status": "draft",
+  "description": "Observation of average speed of gait (Walkin speed) of a patient for a specific day",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/). It is used in Pilot 2 - Chronic adult care – Parkinson’s disease.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:aicSpeedOfGaitCode",
+        "path": "Observation.code.coding",
+        "sliceName": "aicSpeedOfGaitCode",
+        "fixedCoding": {
+          "system": "http://loinc.org",
+          "code": "41957-2"
+        }
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      }
+    ]
+  }
+}

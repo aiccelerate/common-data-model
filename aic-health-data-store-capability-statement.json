@@ -55,7 +55,7 @@
         {
           "type": "AdverseEvent",
           "profile": "http://hl7.org/fhir/StructureDefinition/AdverseEvent",
-          "supportedProfile": ["https://aiccelerate.eu/fhir/StructureDefinition/AIC_ComplicationAfterOperation"],
+          "supportedProfile": ["https://aiccelerate.eu/fhir/StructureDefinition/AIC-ComplicationAfterOperation"],
           "interaction": [
             {
               "code": "read",
@@ -870,7 +870,7 @@
         {
           "type": "Condition",
           "profile": "http://hl7.org/fhir/StructureDefinition/Condition",
-          "supportedProfile": ["https://aiccelerate.eu/fhir/StructureDefinition/AIC_Condition"],
+          "supportedProfile": ["https://aiccelerate.eu/fhir/StructureDefinition/AIC-Condition"],
           "interaction": [
             {
               "code": "read",
@@ -1203,8 +1203,8 @@
           "type": "DiagnosticReport",
           "profile": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_DiagnosticStudy",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalDiagnosticStudyReport"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-DiagnosticStudy",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalDiagnosticStudyReport"
           ],
           "interaction": [
             {
@@ -1361,7 +1361,7 @@
           "type": "DocumentReference",
           "profile": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ClinicalNote"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ClinicalNote"
           ],
           "interaction": [
             {
@@ -1573,12 +1573,12 @@
           "type": "Encounter",
           "profile": "http://hl7.org/fhir/StructureDefinition/Encounter",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Encounter",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisodeEncounter",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SurgeryEncounter",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonCareEncounter",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricPalliativeCareEncounter",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalCareEncounter"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Encounter",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationEpisodeEncounter",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SurgeryEncounter",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonCareEncounter",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricPalliativeCareEncounter",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalCareEncounter"
           ],
           "interaction": [
             {
@@ -1793,7 +1793,7 @@
           "type": "EpisodeOfCare",
           "profile": "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationEpisode"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationEpisode"
           ],
           "interaction": [
             {
@@ -2010,7 +2010,7 @@
           "type": "Flag",
           "profile": "http://hl7.org/fhir/StructureDefinition/Flag",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationFlag"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationFlag"
           ],
           "interaction": [
             {
@@ -2099,7 +2099,7 @@
           "type": "Location",
           "profile": "http://hl7.org/fhir/StructureDefinition/Location",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HospitalUnit"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HospitalUnit"
           ],
           "interaction": [
             {
@@ -2258,7 +2258,7 @@
           "type": "Medication",
           "profile": "http://hl7.org/fhir/StructureDefinition/Medication",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Medication"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Medication"
           ],
           "interaction": [
             {
@@ -2372,7 +2372,7 @@
           "type": "MedicationAdministration",
           "profile": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_MedicationAdministration"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-MedicationAdministration"
           ],
           "interaction": [
             {
@@ -2511,7 +2511,7 @@
           "type": "MedicationStatement",
           "profile": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_MedicationUsed"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-MedicationUsed"
           ],
           "interaction": [
             {
@@ -2647,53 +2647,53 @@
             "http://hl7.org/fhir/StructureDefinition/bodyweight",
             "http://hl7.org/fhir/StructureDefinition/bmi",
             "http://hl7.org/fhir/StructureDefinition/bp",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PatientObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Symptom",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PreoperativeSymptom",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricPalliativeCareSymptom",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_LabResult",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_LabResultWithinSurgicalWorkflow",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalLabResult",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalSymptomFinding",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HealthBehaviourAssessment",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SmokingStatus",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PreoperativeRiskFactor",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_AnesthesiaObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_IntraOperativeObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_BloodGroupObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationUrgency",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ASAClassification",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PregnancyStatus",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PostGestationalAge",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PostMenstrualAge",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_NEWSScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PEWSScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_GlascowComaScaleObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_DailySteps",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OrthostaticHypotension",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SpeedOfGait",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_DailySleepSummary",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SkinConductanceResponseObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HeartRateVariabilityObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_MotorActivityObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_LevelOfEducation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_EmploymentStatus",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonMotorObservation",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonMotorSymptom",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonTremorScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonDyskinesiaScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonWearingOffScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonFreezingOfGaitScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonFluctuationsScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonPosturalBalanceScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonBradykinesiaScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonDystoniaScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonStiffnessScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonMobilityScore",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonNonMotorSymptomAssessment",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonCognitiveBehavioralAssessment",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricPalliativeCareObservation"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Symptom",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PreoperativeSymptom",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricPalliativeCareSymptom",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-LabResult",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-LabResultWithinSurgicalWorkflow",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalLabResult",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalSymptomFinding",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HealthBehaviourAssessment",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SmokingStatus",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PreoperativeRiskFactor",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-AnesthesiaObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-IntraOperativeObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-BloodGroupObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationUrgency",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ASAClassification",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PregnancyStatus",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PostGestationalAge",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PostMenstrualAge",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-NEWSScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PEWSScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-GlascowComaScaleObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-DailySteps",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OrthostaticHypotension",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SpeedOfGait",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-DailySleepSummary",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SkinConductanceResponseObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HeartRateVariabilityObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-MotorActivityObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-LevelOfEducation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-EmploymentStatus",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonMotorObservation",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonMotorSymptom",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonTremorScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonDyskinesiaScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonWearingOffScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonFreezingOfGaitScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonFluctuationsScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonPosturalBalanceScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonBradykinesiaScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonDystoniaScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonStiffnessScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonMobilityScore",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonNonMotorSymptomAssessment",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonCognitiveBehavioralAssessment",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricPalliativeCareObservation"
           ],
           "interaction": [
             {
@@ -3182,7 +3182,7 @@
           "type": "Organization",
           "profile": "http://hl7.org/fhir/StructureDefinition/Organization",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_HospitalDepartment"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HospitalDepartment"
           ],
           "interaction": [
             {
@@ -3338,7 +3338,7 @@
           "type": "Patient",
           "profile": "http://hl7.org/fhir/StructureDefinition/Patient",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Patient"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Patient"
           ],
           "interaction": [
             {
@@ -3571,7 +3571,7 @@
           "type": "Practitioner",
           "profile": "http://hl7.org/fhir/StructureDefinition/Practitioner",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Practitioner"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Practitioner"
           ],
           "interaction": [
             {
@@ -3751,8 +3751,8 @@
           "type": "PractitionerRole",
           "profile": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PractitionerRoleForSurgicalWorkflow",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalPractitionerRole"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PractitionerRoleForSurgicalWorkflow",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalPractitionerRole"
           ],
           "interaction": [
             {
@@ -3909,13 +3909,13 @@
           "type": "Procedure",
           "profile": "http://hl7.org/fhir/StructureDefinition/Procedure",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_Procedure",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ProcedureRelatedWithSurgicalWorkflow",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricPalliativeCareProcedure",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalProcedure",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationPhaseDetails",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SurgeryPhaseDetails",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_AnesthesiaPhaseDetails"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Procedure",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ProcedureRelatedWithSurgicalWorkflow",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricPalliativeCareProcedure",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalProcedure",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationPhaseDetails",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SurgeryPhaseDetails",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-AnesthesiaPhaseDetails"
           ],
           "interaction": [
             {
@@ -4080,10 +4080,10 @@
           "type": "RiskAssessment",
           "profile": "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SHCPRiskAssessment",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SurgicalWorkflowRiskAssessment",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_ParkinsonRelatedRiskAssessment",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricRiskAssessment"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SHCPRiskAssessment",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SurgicalWorkflowRiskAssessment",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonRelatedRiskAssessment",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricRiskAssessment"
           ],
           "interaction": [
             {
@@ -4198,8 +4198,8 @@
           "type": "Schedule",
           "profile": "http://hl7.org/fhir/StructureDefinition/Schedule",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_WorkShiftForSurgicalWorkflow",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalWorkshift"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-WorkShiftForSurgicalWorkflow",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalWorkshift"
           ],
           "interaction": [
             {
@@ -4294,13 +4294,13 @@
           "type": "ServiceRequest",
           "profile": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
           "supportedProfile": [
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationPlan",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_OperationPhasePlan",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_SurgeryPhasePlan",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_AnesthesiaPhasePlan",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalDiagnosticStudyOrder",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalLabOrder",
-            "https://aiccelerate.eu/fhir/StructureDefinition/AIC_PediatricNeurooncologicalPlannedProcedure"
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationPlan",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationPhasePlan",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SurgeryPhasePlan",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-AnesthesiaPhasePlan",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalDiagnosticStudyOrder",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalLabOrder",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalPlannedProcedure"
           ],
           "interaction": [
             {

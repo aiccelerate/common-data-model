@@ -1,0 +1,107 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-DailySleepSummary",
+  "name": "AIC-DailySleepSummary",
+  "title": "Daily Sleep Summary",
+  "status": "draft",
+  "description": "A multi component observation that provides several parameters like duration of deep sleep, or number of interruptions regarding sleep quality per night.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/). It is used in Pilot 2 - Chronic adult care – Parkinson’s disease.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code.coding.code"
+            }
+          ],
+          "description": "Quality of sleep evaluations",
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.component:deepSleepDuration",
+        "path": "Observation.component",
+        "sliceName": "deepSleepDuration",
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:deepSleepDuration.code",
+        "path": "Observation.component.code",
+        "short": "Duration of deep sleep",
+        "definition": "Duration of deep sleep per night",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "93831-6"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:deepSleepDuration.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Duration"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:numOfAwake",
+        "path": "Observation.component",
+        "sliceName": "numOfAwake",
+        "short": "Number of interruptions",
+        "definition": "Number of interruptions for sleep",
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:numOfAwake.code",
+        "path": "Observation.component.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "67233009"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:numOfAwake.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonCareEncounter",
+  "name": "AIC-ParkinsonCareEncounter",
+  "title": "Parkinson Care Encounter",
+  "status": "draft",
+  "description": "Represents interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) in AICCELERATE within Pilot 2 scenario (Parkinson Care).",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 2 - Chronic adult care – Parkinson’s disease.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter.type",
+        "path": "Encounter.type",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/parkinson-encounter-types"
+        }
+      }
+    ]
+  }
+}

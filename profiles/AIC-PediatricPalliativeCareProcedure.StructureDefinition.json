@@ -1,0 +1,28 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricPalliativeCareProcedure",
+  "name": "AIC-PediatricPalliativeCareProcedure",
+  "title": "Pediatric Palliative Care Procedure",
+  "status": "draft",
+  "description": "Represent applied procedure or treatment to the patient related with pediatric palliative care",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3  Palliative and chronic pediatric service delivery and patient workflow - Part 3",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.code.coding:aicProcedureCode",
+        "path": "Procedure.code.coding",
+        "sliceName": "aicProcedureCode",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/pediatric-palliative-care-procedures"
+        }
+      }
+    ]
+  }
+}

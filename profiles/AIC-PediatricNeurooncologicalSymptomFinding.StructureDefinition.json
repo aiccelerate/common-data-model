@@ -1,0 +1,67 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalSymptomFinding",
+  "name": "AIC-PediatricNeurooncologicalSymptomFinding",
+  "title": "Pediatric Neurooncological Symptom or Finding",
+  "status": "draft",
+  "description": "Represents a finding or symptom that is related with the disease e.g., headache, nausea, etc.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 2 - Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:aicSymptomCode",
+        "path": "Observation.code.coding",
+        "sliceName": "aicSymptomCode",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/pediatric-neurooncological-findings"
+        }
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

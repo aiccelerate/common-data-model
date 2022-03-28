@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Medication",
+  "name": "AIC-Medication",
+  "status": "draft",
+  "description": "Definition of medication and its ingredients in terms of ATC codes.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication.ingredient",
+        "path": "Medication.ingredient",
+        "min": 1
+      },
+      {
+        "id": "Medication.ingredient.item[x]",
+        "path": "Medication.ingredient.item[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Ingredients indicated by ATC codes",
+          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
+        }
+      },
+      {
+        "id": "Medication.ingredient.item[x].coding",
+        "path": "Medication.ingredient.item[x].coding",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalWorkshift",
+  "name": "AIC-PediatricNeurooncologicalWorkshift",
+  "title": "Pediatric Neurooncological Workshift",
+  "status": "draft",
+  "description": "Represents a work shift of a practitioner within pediatric neurooncological workflow",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 1- Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Schedule",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Schedule",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Schedule.extension",
+        "path": "Schedule.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Schedule.extension:isAbsent",
+        "path": "Schedule.extension",
+        "sliceName": "isAbsent",
+        "short": "Whether practitioner is absent",
+        "definition": "Whether practitioner is absent in this workshift",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-WorkShiftAbsence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Schedule.actor",
+        "path": "Schedule.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalPractitionerRole"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Schedule.planningHorizon",
+        "path": "Schedule.planningHorizon",
+        "min": 1
+      }
+    ]
+  }
+}

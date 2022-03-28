@@ -1,0 +1,84 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-AnesthesiaObservation",
+  "name": "AIC-AnesthesiaObservation",
+  "title": "Anesthesia Observation",
+  "status": "draft",
+  "description": "Represents a time series observation or parameter related with anesthesia during the operation e.g. FiSefowl, O2",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.partOf",
+        "path": "Observation.partOf",
+        "short": "Reference to the anesthesia procedure",
+        "definition": "Reference to the anesthesia procedure that these parameters are observed",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationPhaseDetails"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "definition": "Indicating the parameter observed related with the anesthesia/operation",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/anesthesia-parameters"
+        }
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "definition": "Reference to the surgery encounter that this observation is made",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SurgeryEncounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "Time series data",
+        "definition": "Time series data for the parameter",
+        "min": 1,
+        "type": [
+          {
+            "code": "SampledData"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x].data",
+        "path": "Observation.value[x].data",
+        "min": 1
+      }
+    ]
+  }
+}

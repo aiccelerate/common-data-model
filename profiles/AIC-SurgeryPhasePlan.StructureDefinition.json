@@ -1,0 +1,89 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SurgeryPhasePlan",
+  "name": "AIC-SurgeryPhasePlan",
+  "title": "Surgery Phase Plan",
+  "status": "draft",
+  "description": "A plan or schedule for surgery phase of a planned operation",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationPhasePlan",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.code"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.category:aicOperationPhaseCategory",
+        "path": "ServiceRequest.category",
+        "sliceName": "aicOperationPhaseCategory",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "387713003"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "min": 1,
+        "binding": {
+          "strength": "example",
+          "description": "Main surgical procedure",
+          "valueSet": "http://hl7.org/fhir/ValueSet/icd-10-procedures"
+        }
+      },
+      {
+        "id": "ServiceRequest.code.coding",
+        "path": "ServiceRequest.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.code.coding:aicSurgicalProcedureCode",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "aicSurgicalProcedureCode",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/icd-10-procedures"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail",
+        "path": "ServiceRequest.orderDetail",
+        "binding": {
+          "strength": "extensible",
+          "description": "Detailed surgical procedures.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/icd-10-procedures"
+        }
+      }
+    ]
+  }
+}

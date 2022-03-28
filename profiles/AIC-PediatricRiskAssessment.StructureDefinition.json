@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricRiskAssessment",
+  "name": "AIC-PediatricRiskAssessment",
+  "title": "Pediatric Risk Assessment",
+  "status": "draft",
+  "description": "This is the  profile that represents a risk assessment/prediction done by AICCELERATE SHCP Engine within chronic or palliative pediatric care (Pilot 3) e.g., risk category for palliative patient",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 3 - Palliative and chronic pediatric service delivery and patient workflow",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "RiskAssessment",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SHCPRiskAssessment",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RiskAssessment.prediction.outcome",
+        "path": "RiskAssessment.prediction.outcome",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/pediatric-risk-assessments"
+        }
+      }
+    ]
+  }
+}

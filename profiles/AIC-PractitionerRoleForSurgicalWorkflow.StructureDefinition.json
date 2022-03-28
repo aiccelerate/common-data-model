@@ -1,0 +1,74 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PractitionerRoleForSurgicalWorkflow",
+  "name": "AIC-PractitionerRoleForSurgicalWorkflow",
+  "status": "draft",
+  "description": "A specific role/specialty in the hospital setting that takes role in the operation workflow e.g., specialized surgeon, theatre nurse, etc.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PractitionerRole.code",
+        "path": "PractitionerRole.code",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.code:aicRole",
+        "path": "PractitionerRole.code",
+        "sliceName": "aicRole",
+        "definition": "Roles which this practitioner is authorized to perform for the organization within the surgical worfklow.",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/practitioner-roles-for-surgery"
+        }
+      },
+      {
+        "id": "PractitionerRole.code:aicRole.coding",
+        "path": "PractitionerRole.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "PractitionerRole.location",
+        "path": "PractitionerRole.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HospitalUnit"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

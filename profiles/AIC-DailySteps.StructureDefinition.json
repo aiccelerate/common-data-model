@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-DailySteps",
+  "name": "AIC-DailySteps",
+  "title": "Daily Steps",
+  "status": "draft",
+  "description": "Number of steps taken by a patient within a specific day",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/). It is used in Pilot 2 - Chronic adult care – Parkinson’s disease.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "fixedQuantity": {
+          "system": "http://unitsofmeasure.org",
+          "code": "{steps}"
+        },
+        "minValueQuantity": {
+          "value": 0.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-IntraOperativeObservation",
+  "name": "AIC-IntraOperativeObservation",
+  "title": "Intra Operative Observation",
+  "status": "draft",
+  "description": "Other intra operative observations during the operation e.g. cumulative bleeding,",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.partOf",
+        "path": "Observation.partOf",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationPhaseDetails"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:aicIntraOpObsCode",
+        "path": "Observation.code.coding",
+        "sliceName": "aicIntraOpObsCode",
+        "short": "Observation code",
+        "definition": "Code indicating the type of intra operative observation",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "description": "List of intra-operative observations defined in AICCELERATE",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/intra-operative-observations"
+        }
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationEpisodeEncounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }
+    ]
+  }
+}

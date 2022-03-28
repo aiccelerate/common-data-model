@@ -1,0 +1,80 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonMotorObservation",
+  "name": "AIC-ParkinsonMotorObservation",
+  "title": "Parkinson Motor Observation",
+  "status": "draft",
+  "description": "A base profile for parkinson related observations for motor functions",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 2 - Chronic adult care – Parkinson’s disease.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "max": "1"
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Encounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "binding": {
+          "strength": "extensible"
+        }
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/parkinson-motor-symptom-assessment-methods"
+        }
+      }
+    ]
+  }
+}

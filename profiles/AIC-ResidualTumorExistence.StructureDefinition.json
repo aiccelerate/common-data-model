@@ -1,0 +1,41 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ResidualTumorExistence",
+  "name": "AIC-ResidualTumorExistence",
+  "title": "Residual Tumour Existence",
+  "status": "draft",
+  "description": "Represents an observation about residual tumor existence for a patient",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 2 - Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding:aicObservationCode",
+        "path": "Observation.code.coding",
+        "sliceName": "aicObservationCode",
+        "fixedCoding": {
+          "system": "http://loinc.org",
+          "code": "84892-9"
+        }
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/residual-tumor-existence-codes"
+        }
+      }
+    ]
+  }
+}

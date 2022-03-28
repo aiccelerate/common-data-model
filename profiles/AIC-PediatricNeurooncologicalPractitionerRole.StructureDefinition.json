@@ -1,0 +1,81 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalPractitionerRole",
+  "name": "AIC-PediatricNeurooncologicalPractitionerRole",
+  "title": "Pediatric Neurooncological Practitioner Role",
+  "status": "draft",
+  "description": "Represents a role that take part within the pediatric neurooncological workflow",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 1- Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PractitionerRole.organization",
+        "path": "PractitionerRole.organization",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.code",
+        "path": "PractitionerRole.code",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.code:aicRole",
+        "path": "PractitionerRole.code",
+        "sliceName": "aicRole",
+        "definition": "Roles which this practitioner is authorized to perform for the organization within the surgical worfklow.",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/practitioner-roles-for-pediatric-neurooncology"
+        }
+      },
+      {
+        "id": "PractitionerRole.code:aicRole.coding",
+        "path": "PractitionerRole.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "PractitionerRole.location",
+        "path": "PractitionerRole.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HospitalUnit"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

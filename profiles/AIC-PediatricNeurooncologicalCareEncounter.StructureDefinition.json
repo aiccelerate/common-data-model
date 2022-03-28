@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalCareEncounter",
+  "name": "AIC-PediatricNeurooncologicalCareEncounter",
+  "title": "Pediatric Neurooncological Care Encounter",
+  "status": "draft",
+  "description": "Represents a visit or hospitalization encounter within the pediatric neurooncological care workflow",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of in Pilot 3 - Part 1&2 - Optimisation of pediatric neuro-oncological service delivery",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter.type.coding",
+        "path": "Encounter.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Encounter.type.coding:aicEncounterTypeCode",
+        "path": "Encounter.type.coding",
+        "sliceName": "aicEncounterTypeCode",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/pediatric-neurooncological-care-encounter-types"
+        }
+      },
+      {
+        "id": "Encounter.participant.individual",
+        "path": "Encounter.participant.individual",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Practitioner",
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalPractitionerRole"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.participant.individual.reference",
+        "path": "Encounter.participant.individual.reference",
+        "min": 1
+      },
+      {
+        "id": "Encounter.location.location",
+        "path": "Encounter.location.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HospitalUnit"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

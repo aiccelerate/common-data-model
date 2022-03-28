@@ -1,0 +1,118 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-OperationEpisode",
+  "name": "AIC-OperationEpisode",
+  "title": "Operation Episode",
+  "status": "draft",
+  "publisher": "AICCELERATE (https://aiccelerate.eu/)",
+  "description": "Represents the association of a Patient with a Healthcare Provider for the period of care related with the surgical operation  including the admission, preoperative visits, planning, operation itself, and hospitalization until discharge.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) with the scope of Pilot 1- Patient flow management for Emergency Room and Surgical units.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "EpisodeOfCare",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "EpisodeOfCare.status",
+        "path": "EpisodeOfCare.status",
+        "definition": "Only the statuses (active | finished) are used in AICCELERATE.\r\n- active: It indicates that episode is ongoing\r\n- finished: It indicates that episode is finished"
+      },
+      {
+        "id": "EpisodeOfCare.type",
+        "path": "EpisodeOfCare.type",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "EpisodeOfCare.type:operationEpisodeType",
+        "path": "EpisodeOfCare.type",
+        "sliceName": "operationEpisodeType",
+        "short": "Type of operation episode",
+        "definition": "A classification of operation episode whether it is emergency case or elective surgery",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/operation-episode-types"
+        }
+      },
+      {
+        "id": "EpisodeOfCare.type:operationEpisodeType.coding",
+        "path": "EpisodeOfCare.type.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "EpisodeOfCare.diagnosis",
+        "path": "EpisodeOfCare.diagnosis",
+        "short": "The list of diagnosis relevant to this operation episode",
+        "definition": "Main diagnosis that causes the surgery and its comorbidities",
+        "min": 1
+      },
+      {
+        "id": "EpisodeOfCare.diagnosis.condition",
+        "path": "EpisodeOfCare.diagnosis.condition",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "EpisodeOfCare.diagnosis.role",
+        "path": "EpisodeOfCare.diagnosis.role",
+        "short": "Role that this diagnosis has within the episode of care (e.g. pre-op main diagnosis, comorbidy)",
+        "definition": "Role that this diagnosis has within the episode of care (e.g. pre-op main diagnosis, comorbidy)",
+        "min": 1,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/operation-episode-diagnosis-roles"
+        }
+      },
+      {
+        "id": "EpisodeOfCare.diagnosis.role.coding",
+        "path": "EpisodeOfCare.diagnosis.role.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "EpisodeOfCare.patient",
+        "path": "EpisodeOfCare.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "EpisodeOfCare.period",
+        "path": "EpisodeOfCare.period",
+        "short": "Time period for this care",
+        "definition": "Time period starting from first admission to discharge after surgery.",
+        "min": 1
+      },
+      {
+        "id": "EpisodeOfCare.period.start",
+        "path": "EpisodeOfCare.period.start",
+        "min": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-LabResultWithinSurgicalWorkflow",
+  "name": "AIC-LabResultWithinSurgicalWorkflow",
+  "status": "draft",
+  "description": "Represent the result of a laboratory observation related with surgical workflow",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) and used in Pilot 1- Patient flow management for Emergency Room and Surgical units",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-LabResult",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding:labResultLoincCode",
+        "path": "Observation.code.coding",
+        "sliceName": "labResultLoincCode",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/preoperative-lab-results"
+        }
+      }
+    ]
+  }
+}

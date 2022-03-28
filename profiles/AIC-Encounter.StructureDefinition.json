@@ -1,0 +1,41 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Encounter",
+  "name": "AIC-Encounter",
+  "status": "draft",
+  "description": "This is one of the base profiles for AICCELARATE that represents interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) within hospital workflows",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) and one of the base profiles that is commonly used in all three pilots; i) Pilot 1- Patient flow management for Emergency Room and Surgical units., ii) Pilot 2 - Chronic adult care – Parkinson’s disease, iii)  Palliative and chronic pediatric service delivery and patient workflow",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter.type",
+        "path": "Encounter.type",
+        "min": 1
+      },
+      {
+        "id": "Encounter.subject",
+        "path": "Encounter.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.period",
+        "path": "Encounter.period",
+        "min": 1
+      }
+    ]
+  }
+}
