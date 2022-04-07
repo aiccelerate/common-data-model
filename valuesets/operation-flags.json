@@ -57,6 +57,18 @@
 		  {
             "code": "reduced-mobility-o1000",
             "display": "Ambulation is restricted under over 1 km"
+          },		  
+		  {
+            "code": "using-treatment-facility",
+            "display": "Using treatment facility"
+          },
+		  {
+            "code": "using-children-health-clinic",
+            "display": "Children health clinic"
+          },
+		  {
+            "code": "other-therapy",
+            "display": "Other, therapy and support"
           }
 		]
 	  },
@@ -190,6 +202,38 @@
 		  {
             "code": "95677002",
             "display": "Disorder of vision (disorder)"
+          },		  
+		  {
+            "code": "281789004",
+            "display": "Antibiotic Therapy"
+          },
+		  {
+            "code": "421728001",
+            "display": "Anticoagulant prophylaxis"
+          },
+		  {
+            "code": "182764009",
+            "display": "Anticoagulant therapy"
+          },
+		  {
+            "code": "416608005",
+            "display": "Drug Therapy"
+          },		  
+		  {
+            "code": "108327007",
+            "display": "Home care AND/OR social service"
+          },
+		  {
+            "code": "160774006",
+            "display": "Home help attends (finding)"
+          },
+		  {
+            "code": "65853000",
+            "display": "Student"
+          },
+		  {
+            "code": "304903009",
+            "display": "Provision of day care (regime/therapy) "
           }
         ]
       }

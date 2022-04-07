@@ -70,13 +70,24 @@
         "min": 1,
         "type": [
           {
-            "code": "SampledData"
+            "code": "Quantity"
           }
         ]
       },
       {
-        "id": "Observation.value[x].data",
-        "path": "Observation.value[x].data",
+        "id": "Observation.value[x].value",
+        "path": "Observation.value[x].value",
+        "min": 1
+      },
+      {
+        "id": "Observation.value[x].system",
+        "path": "Observation.value[x].system",
+        "min": 1,
+        "fixedUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Observation.value[x].code",
+        "path": "Observation.value[x].code",
         "min": 1
       }
     ]
