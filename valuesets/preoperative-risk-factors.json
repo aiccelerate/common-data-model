@@ -192,6 +192,10 @@
             "display": "Medication requiring special attention"
           },
 		  {
+            "code": "attention-treatment",
+            "display": "Other treatment requiring special attention"
+          }
+		  {
             "code": "restriction-treatment",
             "display": "Restriction on treatment"
           }		  

@@ -1,0 +1,49 @@
+{
+  "resourceType": "ValueSet",
+  "id": "surgical-wound-classification",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/surgical-wound-classification",  
+  "version": "0.1",
+  "name": "AICCELERATE CDC Surgical Wound Classification Codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for surgical wound classification (Codes under SNOMED-CT concept 420109006 Surgical wound classification finding)",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "418780004",
+            "display": "Clean (Class I)"
+          },
+          {
+            "code": "418115006",
+            "display": "Clean-contaminated (Class II)"
+          },
+          {
+            "code": "419877002",
+            "display": "Contaminated (Class III)"
+          },
+          {
+            "code": "418422005",
+            "display": "Dirty-infected (Class IV)"
+          }
+        ]
+      }
+    ]
+  }
+}

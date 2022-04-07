@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "id": "operation-cancellation-reasons",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/operation-cancellation-reasons",  
+  "version": "0.1",
+  "name": "AICCELERATE Surgical Workflow Operation Cancellation Reasons",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "AICCELERATE codes for cancellation reasons for a surgery for AICCELERATE SHCP Patient Flow Management for ER and Surgical Units scenario.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://aiccelerate.eu/fhir/CodeSystem/operation-cancellation-reasons"               
+      }
+    ]
+  }
+}

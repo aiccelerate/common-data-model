@@ -1,0 +1,215 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "operation-cancellation-reasons", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/operation-cancellation-reasons",
+  "version": "0.1",
+  "name": "AICCELERATE Operation Cancelation Reasons",
+  "title": "AICCELERATE Operation Cancelation Reasons",
+  "status": "draft",  
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of custom codes defined within AICCELERATE project for cancelation reasons of a surgical procedure",
+  "caseSensitive": true,
+  "content": "complete",  
+  "concept": [
+		  {
+            "code": "300",
+            "display": "Patient unfit for surgery"
+          },
+          {
+            "code": "301",
+            "display": "Patient unfit for anesthesia"
+          },
+          {
+            "code": "302",
+            "display": "Patient has an acute infection"
+          },
+          {
+            "code": "303",
+            "display": "Patient did not turn up"
+          },
+		  {
+            "code": "304",
+            "display": "Patient refuses the procedure"
+          },
+		  {
+            "code": "305",
+            "display": "Change in treatment plan (no surgery)"
+          },
+		  {
+            "code": "306",
+            "display": "Patient treated for another reason"
+          },
+          {
+            "code": "307",
+            "display": "Day surgery patient does not have an adult at home"
+          },
+          {
+            "code": "308",
+            "display": "Patient dead"
+          },
+          {
+            "code": "309",
+            "display": "Procedure done elsewhere"
+          },
+		  {
+            "code": "310",
+            "display": "Procedure done in ER"
+          },
+		  {
+            "code": "311",
+            "display": "Other reason caused by patient"
+          },
+		  {
+            "code": "312",
+            "display": "No anesthesiologist available"
+          },
+          {
+            "code": "313",
+            "display": "No operating doctor available"
+          },
+          {
+            "code": "314",
+            "display": "No nursing staff available"
+          },
+          {
+            "code": "315",
+            "display": "No operating room available"
+          },
+		  {
+            "code": "316",
+            "display": "Needed equipment not available"
+          },
+		  {
+            "code": "317",
+            "display": "Needed supplies not available"
+          },
+		  {
+            "code": "318",
+            "display": "Previous surery prolonged"
+          },
+          {
+            "code": "319",
+            "display": "More urgent operation in the same operating room"
+          },
+          {
+            "code": "320",
+            "display": "ER overcrowding"
+          },
+          {
+            "code": "321",
+            "display": "Previous patient stays in the operating room for monitoring"
+          },
+		  {
+            "code": "322",
+            "display": "Lack of resources due to an organ donor"
+          },
+		  {
+            "code": "323",
+            "display": "Lack of resources due to organ transplantation"
+          },
+		  {
+            "code": "324",
+            "display": "Other reason related to the procedure unit"
+          },
+          {
+            "code": "325",
+            "display": "Transferred to another unit"
+          },
+		  {
+            "code": "326",
+            "display": "Improper preoperative patient preparation"
+          },
+		  {
+            "code": "327",
+            "display": "Overbooking of the operating room"
+          },
+		  {
+            "code": "328",
+            "display": "Patient has not fasted"
+          },
+          {
+            "code": "329",
+            "display": "Reason caused by the sending unit"
+          },
+          {
+            "code": "330",
+            "display": "Wrong recording(typo,etc)"
+          },
+          {
+            "code": "331",
+            "display": "IT reason"
+          },
+		  {
+            "code": "332",
+            "display": "No ICU bed available"
+          },
+		  {
+            "code": "333",
+            "display": "No enhanced monitoring available"
+          },
+		  {
+            "code": "334",
+            "display": "No ward bed available"
+          },
+          {
+            "code": "335",
+            "display": "Patient reasons (billable)"
+          },
+		  {
+            "code": "338",
+            "display": "Epidemic"
+          },
+		  {
+            "code": "370",
+            "display": "Patient is sick"
+          },
+          {
+            "code": "371",
+            "display": "Patient needs further investigation/treatment"
+          },
+		  {
+            "code": "372",
+            "display": "Patient is unwell during anesthesia"
+          },
+		  {
+            "code": "373",
+            "display": "Patient's parents cancelled the operation"
+          },
+		  {
+            "code": "374",
+            "display": "Follow-up care is not available"
+          },
+          {
+            "code": "375",
+            "display": "Not enough resources during office hours"
+          },
+		  {
+            "code": "376",
+            "display": "Strike/walkout"
+          },
+		  {
+            "code": "377",
+            "display": "Covid-19 pandemic"
+          },
+		  {
+            "code": "378",
+            "display": "Covid-19 pandemic/patient"
+          },
+          {
+            "code": "379",
+            "display": "Other"
+          }
+  ]
+}

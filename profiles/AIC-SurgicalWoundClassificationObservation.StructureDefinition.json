@@ -1,0 +1,83 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-SurgicalWoundClassificationObservation",
+  "name": "AIC-SurgicalWoundClassificationObservation",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PatientObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:cdsWoundClassification",
+        "path": "Observation.code.coding",
+        "sliceName": "cdsWoundClassification",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required"
+        }
+      },
+      {
+        "id": "Observation.code.coding:cdsWoundClassification.system",
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.code.coding:cdsWoundClassification.code",
+        "path": "Observation.code.coding.code",
+        "fixedCode": "420109006"
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x].coding",
+        "path": "Observation.value[x].coding",
+        "slicing": {
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.value[x].coding:cdcWoundClassificationValue",
+        "path": "Observation.value[x].coding",
+        "sliceName": "cdcWoundClassificationValue",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/surgical-wound-classification"
+        }
+      }
+    ]
+  }
+}

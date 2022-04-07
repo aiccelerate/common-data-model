@@ -52,7 +52,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PractitionerRoleForSurgicalWorkflow"
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PractitionerRoleForSurgicalWorkflow",
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HospitalUnit"
             ]
           }
         ]

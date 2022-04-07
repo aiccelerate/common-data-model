@@ -27,24 +27,28 @@
         "system": "https://loinc.org",        
         "concept": [
           {
-            "code": "LA32129-1",
+            "code": "413495001",
             "display": "ASA1 (no disturbance)"
           },
 		  {
-            "code": "LA32130-9",
+            "code": "413496000",
             "display": "ASA2 (mild/moderate)"
           },
 		  {
-            "code": "LA32131-7",
+            "code": "413497009",
             "display": "ASA3 (severe)"
           },
 		  {
-            "code": "LA32132-5",
+            "code": "413498004",
             "display": "ASA4 (life threatening)"
           },
 		  {
-            "code": "LA32133-3",
+            "code": "413499007",
             "display": "ASA5 (moribund)"
+          },		  
+		  {
+            "code": "413500003",
+            "display": "ASA6 (brain dead)"
           }
         ]
       },

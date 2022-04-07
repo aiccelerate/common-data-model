@@ -15,11 +15,6 @@
   "differential": {
     "element": [
       {
-        "id": "Condition.clinicalStatus",
-        "path": "Condition.clinicalStatus",
-        "min": 1
-      },
-      {
         "id": "Condition.code",
         "path": "Condition.code",
         "min": 1
