@@ -57,6 +57,22 @@
 		  {
             "code": "387603000",
             "display": "Balance Impairment"
+          },
+		  {
+            "code": "22253000",
+            "display": "Pain"
+          },
+		  {
+            "code": "14760008",
+            "display": "Constipation"
+          },
+		  {
+            "code": "267036007",
+            "display": "Shortness of breath"
+          },
+		  {
+            "code": "386661006",
+            "display": "Fever"
           }
         ]
       }

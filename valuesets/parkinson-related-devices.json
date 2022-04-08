@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "parkinson-related-devices",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/parkinson-related-devices",  
+  "version": "0.1",
+  "name": "AICCELERATE Devices Related with Parkinson ",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of important medical device types used by Parkinson patients",
+  "compose": {    
+    "inactive": false,
+    "include": [     
+	  {
+		"system": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-related-devices",        
+		"concept": [
+			{
+				"code": "deep-brain-stimulator",
+				"display": "Deep Brain Stimulator"
+			},
+			{
+				"code": "levodopa-infusion-pump",
+				"display": "Levodopa Infusion Pump"
+			},
+			{
+				"code": "apomorfine-pump",
+				"display": "Apomorfine Infusion Pump"
+			}
+		]
+	  }
+    ]
+  }
+}

@@ -142,6 +142,18 @@
 			{
 				"code": "bnt",
 				"display": "Boston Naming test Z-score"
+			},
+			{
+				"code": "fazekas",
+				"display": "Fazekas score, Radiology"
+			},
+			{
+				"code": "mta",
+				"display": "Medial temporal atrophy score"
+			},
+			{
+				"code": "gca",
+				"display": "Global cortical atrophy score"
 			}
 		]
 	  },

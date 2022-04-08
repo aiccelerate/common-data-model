@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonRelatedDeviceUsed",
+  "name": "AIC-ParkinsonRelatedDeviceUsed",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DeviceUseStatement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DeviceUseStatement.timing[x]",
+        "path": "DeviceUseStatement.timing[x]",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "DeviceUseStatement.device.reference",
+        "path": "DeviceUseStatement.device.reference",
+        "max": "0"
+      },
+      {
+        "id": "DeviceUseStatement.device.type",
+        "path": "DeviceUseStatement.device.type",
+        "max": "0"
+      },
+      {
+        "id": "DeviceUseStatement.device.identifier",
+        "path": "DeviceUseStatement.device.identifier",
+        "min": 1
+      },
+      {
+        "id": "DeviceUseStatement.device.identifier.system",
+        "path": "DeviceUseStatement.device.identifier.system",
+        "min": 1,
+        "fixedUri": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-related-devices"
+      },
+      {
+        "id": "DeviceUseStatement.device.identifier.value",
+        "path": "DeviceUseStatement.device.identifier.value",
+        "min": 1,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/parkinson-related-devices"
+        }
+      }
+    ]
+  }
+}

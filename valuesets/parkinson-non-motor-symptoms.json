@@ -61,9 +61,30 @@
 		  {
             "code": "22253000",
             "display": "Pain"
+          },
+		  {
+            "code": "449888003",
+            "display": "Normal cognition"
+          },
+		  {
+            "code": "75864003",
+            "display": "Psychiatric symptoms"
+          },
+		  {
+            "code": "66347000",
+            "display": "Impulse control disorder"
           }
         ]
-      }
+      },
+	   {
+		"system": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-symptoms",        
+		"concept": [
+			{
+				"code": "non-motor-symptoms",
+				"display": "Non Motor Symptoms Score"
+			}
+		]
+	   }
     ]
   }
 }

@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "parkinson-symptoms", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-symptoms",
+  "version": "0.1",
+  "name": "AICCELERATE Parkinson Symptoms",
+  "title": "AICCELERATE Parkinson Symptoms",
+  "status": "draft",  
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of custom codes defined within AICCELERATE project for Parkinson motor and non-motor symptoms",
+  "caseSensitive": true,
+  "content": "complete",  
+  "concept": [
+    {
+		"code": "off-time",
+		"display": "Off time"
+	},
+	{
+		"code": "fluctuations",
+		"display": "Fluctuations"
+	},
+	{
+		"code": "non-motor-symptoms",
+		"display": "Non-Motor Symptoms Score"
+	}     
+  ]
+}

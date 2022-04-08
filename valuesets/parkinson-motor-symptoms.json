@@ -61,11 +61,15 @@
 		  {
             "code": "102491009",
             "display": "Immobility"
+          },
+		  {
+            "code": "267082004",
+            "display": "Motor Symptoms Score"
           }
         ]
       },
 	  {
-		"system": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-motor-symptoms",        
+		"system": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-symptoms",        
 		"concept": [
 			{
 				"code": "off-time",
