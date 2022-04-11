@@ -70,6 +70,12 @@
         "id": "Observation.value[x].coding",
         "path": "Observation.value[x].coding",
         "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
           "rules": "open"
         },
         "min": 1

@@ -1,3 +1,5 @@
 *.jar
 *.bat
 *.sh
+aiccelerate.conf
+./logs/*
