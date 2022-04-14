@@ -77,8 +77,7 @@
         "id": "Encounter.length",
         "path": "Encounter.length",
         "short": "Total duration of surgery",
-        "definition": "Total duration of surgery in terms of minutes",
-        "min": 1
+        "definition": "Total duration of surgery in terms of minutes"
       },
       {
         "id": "Encounter.length.system",
@@ -119,11 +118,6 @@
       {
         "id": "Encounter.location",
         "path": "Encounter.location",
-        "min": 1
-      },
-      {
-        "id": "Encounter.location.status",
-        "path": "Encounter.location.status",
         "min": 1
       }
     ]

@@ -50,6 +50,17 @@
         }
       },
       {
+        "id": "Procedure.code.coding:icd10pcsAnesthesiaProcedureCode.system",
+        "path": "Procedure.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org/fhir/sid/ex-icd-10-procedures"
+      },
+      {
+        "id": "Procedure.code.coding:icd10pcsAnesthesiaProcedureCode.code",
+        "path": "Procedure.code.coding.code",
+        "min": 1
+      },
+      {
         "id": "Procedure.code.coding:aicAnesthesiaTypeCode",
         "path": "Procedure.code.coding",
         "sliceName": "aicAnesthesiaTypeCode",
@@ -59,6 +70,17 @@
           "strength": "required",
           "valueSet": "https://aiccelerate.eu/fhir/ValueSet/anesthesia-methods"
         }
+      },
+      {
+        "id": "Procedure.code.coding:aicAnesthesiaTypeCode.system",
+        "path": "Procedure.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Procedure.code.coding:aicAnesthesiaTypeCode.code",
+        "path": "Procedure.code.coding.code",
+        "min": 1
       }
     ]
   }
