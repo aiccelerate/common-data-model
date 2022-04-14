@@ -139,11 +139,6 @@
         "fixedCode": "home"
       },
       {
-        "id": "Patient.address:homeAddress.city",
-        "path": "Patient.address.city",
-        "min": 1
-      },
-      {
         "id": "Patient.address:homeAddress.postalCode",
         "path": "Patient.address.postalCode",
         "min": 1
