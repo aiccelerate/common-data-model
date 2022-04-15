@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "current-smoking-status",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/current-smoking-status",  
+  "version": "0.1",
+  "name": "Smoking Status",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "SNOMED-CT codes for smoking status",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+          {
+            "code": "449868002",
+            "display": "Current every day smoker"
+          },
+          {
+            "code": "428041000124106",
+            "display": "Current some day smoker"
+          },
+          {
+            "code": "8517006",
+            "display": "Former smoker"
+          },
+          {
+            "code": "266919005",
+            "display": "Never smoker"
+          },
+		  {
+            "code": "77176002",
+            "display": "Smoker, current status unknown"
+          },
+		  {
+            "code": "266927001",
+            "display": "Unknown if ever smoked"
+          },
+		  {
+            "code": "428071000124103",
+            "display": "Current Heavy tobacco smoker"
+          },
+		  {
+            "code": "428061000124105",
+            "display": "Current Light tobacco smoker"
+          }
+        ]
+      }
+    ]
+  }
+}
