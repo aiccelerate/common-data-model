@@ -19,12 +19,12 @@
       ]
     }
   ],
-  "description": "The American Society of Anesthesiologists (ASA) physical health classification system grades a patient's overall health before surgery (See https://loinc.org/LL5905-6/).",
+  "description": "The American Society of Anesthesiologists (ASA) physical health classification system grades a patient's overall health before surgery",
   "compose": {    
     "inactive": false,
     "include": [
       {
-        "system": "https://loinc.org",        
+        "system": "http://snomed.info/sct",        
         "concept": [
           {
             "code": "413495001",
@@ -49,18 +49,13 @@
 		  {
             "code": "413500003",
             "display": "ASA6 (brain dead)"
-          }
-        ]
-      },
-	  {
-		"system": "http://snomed.info/sct", 
-		"concept": [
-          {
+          },
+		  {
 			"code": "261665006",
             "display": "Unknown"
 		  }
-		]
-	  }
+        ]
+      }
     ]
   }
 }

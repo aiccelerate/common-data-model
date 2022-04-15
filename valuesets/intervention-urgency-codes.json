@@ -49,6 +49,10 @@
 		  {
             "code": "P3",
             "display": "Urgent (in 24h)"
+          },
+		   {
+            "code": "H",
+            "display": "Emergency/Immediate"
           }
         ]
       }
