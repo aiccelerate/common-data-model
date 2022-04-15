@@ -30,11 +30,19 @@
         "path": "Observation.code.coding",
         "sliceName": "aicNewsScore",
         "min": 1,
-        "max": "1",
-        "fixedCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "445619006"
-        }
+        "max": "1"
+      },
+      {
+        "id": "Observation.code.coding:aicNewsScore.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.code.coding:aicNewsScore.code",
+        "path": "Observation.code.coding.code",
+        "min": 1,
+        "fixedCode": "445619006"
       },
       {
         "id": "Observation.effective[x]",
@@ -55,16 +63,35 @@
             "code": "Quantity"
           }
         ],
-        "fixedQuantity": {
+        "minValueQuantity": {
+          "value": 0.0,
+          "unit": "{score}",
           "system": "http://unitsofmeasure.org",
           "code": "{score}"
         },
-        "minValueQuantity": {
-          "value": 0.0
-        },
         "maxValueQuantity": {
-          "value": 20.0
+          "value": 20.0,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
         }
+      },
+      {
+        "id": "Observation.value[x].value",
+        "path": "Observation.value[x].value",
+        "min": 1
+      },
+      {
+        "id": "Observation.value[x].system",
+        "path": "Observation.value[x].system",
+        "min": 1,
+        "fixedUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Observation.value[x].code",
+        "path": "Observation.value[x].code",
+        "min": 1,
+        "fixedCode": "{score}"
       }
     ]
   }
