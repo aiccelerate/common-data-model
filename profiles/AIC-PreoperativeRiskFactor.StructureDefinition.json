@@ -41,7 +41,7 @@
         "min": 1,
         "max": "1",
         "binding": {
-          "strength": "extensible",
+          "strength": "required",
           "description": "List of important risk factors",
           "valueSet": "https://aiccelerate.eu/fhir/ValueSet/preoperative-risk-factors"
         }
@@ -65,6 +65,9 @@
         "type": [
           {
             "code": "dateTime"
+          },
+          {
+            "code": "Period"
           }
         ]
       },
@@ -107,11 +110,19 @@
         "short": "Is this risk critical (life threating)",
         "definition": "Is this risk critical (life threating)",
         "min": 1,
-        "max": "1",
-        "fixedCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "246112005"
-        }
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:isCritical.code.coding.system",
+        "path": "Observation.component.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.component:isCritical.code.coding.code",
+        "path": "Observation.component.code.coding.code",
+        "min": 1,
+        "fixedCode": "246112005"
       },
       {
         "id": "Observation.component:isCritical.value[x]",
@@ -132,22 +143,22 @@
         "max": "1"
       },
       {
-        "id": "Observation.component:certainity.code",
-        "path": "Observation.component.code",
-        "fixedCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "246103008"
-            }
-          ]
-        }
-      },
-      {
         "id": "Observation.component:certainity.code.coding",
         "path": "Observation.component.code.coding",
         "min": 1,
         "max": "1"
+      },
+      {
+        "id": "Observation.component:certainity.code.coding.system",
+        "path": "Observation.component.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.component:certainity.code.coding.code",
+        "path": "Observation.component.code.coding.code",
+        "min": 1,
+        "fixedCode": "246103008"
       },
       {
         "id": "Observation.component:certainity.value[x]",
@@ -172,22 +183,22 @@
         "max": "1"
       },
       {
-        "id": "Observation.component:isPermanent.code",
-        "path": "Observation.component.code",
-        "fixedCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "260868000"
-            }
-          ]
-        }
-      },
-      {
         "id": "Observation.component:isPermanent.code.coding",
         "path": "Observation.component.code.coding",
         "min": 1,
         "max": "1"
+      },
+      {
+        "id": "Observation.component:isPermanent.code.coding.system",
+        "path": "Observation.component.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.component:isPermanent.code.coding.code",
+        "path": "Observation.component.code.coding.code",
+        "min": 1,
+        "fixedCode": "260868000"
       },
       {
         "id": "Observation.component:isPermanent.value[x]",
