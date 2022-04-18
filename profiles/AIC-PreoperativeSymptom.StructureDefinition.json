@@ -13,7 +13,7 @@
   "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Symptom",
   "derivation": "constraint",
   "differential": {
-    "element": [
+    "element": [     
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
@@ -39,6 +39,17 @@
           "description": "Important symptoms",
           "valueSet": "https://aiccelerate.eu/fhir/ValueSet/preoperative-symptoms"
         }
+      },
+      {
+        "id": "Observation.code.coding:aicPreoperativeSymptomCode.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.code.coding:aicPreoperativeSymptomCode.code",
+        "path": "Observation.code.coding.code",
+        "min": 1
       },
       {
         "id": "Observation.encounter",
