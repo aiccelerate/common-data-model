@@ -1199,6 +1199,68 @@
             }
           ]
         },
+		{
+      "type" : "DeviceUseStatement",
+      "profile" : "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement",
+	  "supportedProfile": ["https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonRelatedDeviceUsed"],
+      "interaction" : [{
+        "code" : "read",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "vread",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "update",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "delete",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "history-instance",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },      
+      {
+        "code" : "create",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      },
+      {
+        "code" : "search-type",
+        "documentation" : "Implemented per the specification (or Insert other doco here)"
+      }],
+      "conditionalCreate" : true,
+      "conditionalUpdate" : true,
+      "conditionalDelete" : "multiple",
+      "referencePolicy" : ["literal", "local", "logical"],
+      "searchInclude" : ["DeviceUseStatement.subject","DeviceUseStatement.patient","DeviceUseStatement.device"],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-identifier",
+        "type" : "token",
+        "documentation" : "Search by identifier"
+      },
+      {
+        "name" : "subject",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-subject",
+        "type" : "reference",
+        "documentation" : "Search by subject"
+      },
+      {
+        "name" : "patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+        "type" : "reference",
+        "documentation" : "Search by subject - a patient"
+      },
+      {
+        "name" : "device",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-device",
+        "type" : "reference",
+        "documentation" : "Search by device"
+      }]
+    },
         {
           "type": "DiagnosticReport",
           "profile": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
