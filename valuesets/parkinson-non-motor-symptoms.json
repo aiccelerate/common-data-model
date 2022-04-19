@@ -34,6 +34,10 @@
             "code": "39898005",
             "display": "Sleep disorder"
           },
+		  {
+            "code": "248254009",
+            "display": "Quality of sleep"
+          },
           {
             "code": "713567005",
             "display": "Daytime sleepiness"
