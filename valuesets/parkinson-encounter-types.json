@@ -33,7 +33,11 @@
           {
             "code": "307808008",
             "display": "Neuropsychological Assesment"
-          }
+          },
+		  {
+			"code":"394841004",
+			"display": "Other category"	
+		  }
         ]
       }
     ]
