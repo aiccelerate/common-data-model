@@ -24,7 +24,7 @@
     "inactive": false,
     "include": [
       {
-        "system": "https://loinc.org",        
+        "system": "http://loinc.org",        
         "concept": [
 		  {
             "code": "60907-3",

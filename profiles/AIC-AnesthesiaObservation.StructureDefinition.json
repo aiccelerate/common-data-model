@@ -58,6 +58,9 @@
         "min": 1,
         "type": [
           {
+            "code": "dateTime"
+          },
+          {
             "code": "Period"
           }
         ]
