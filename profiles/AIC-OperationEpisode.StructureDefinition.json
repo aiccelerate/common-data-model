@@ -11,15 +11,10 @@
   "kind": "resource",
   "abstract": false,
   "type": "EpisodeOfCare",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
+  "baseDefinition": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Episode",
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "EpisodeOfCare.status",
-        "path": "EpisodeOfCare.status",
-        "definition": "Only the statuses (active | finished) are used in AICCELERATE.\r\n- active: It indicates that episode is ongoing\r\n- finished: It indicates that episode is finished"
-      },
       {
         "id": "EpisodeOfCare.type",
         "path": "EpisodeOfCare.type",
@@ -31,8 +26,7 @@
             }
           ],
           "rules": "open"
-        },
-        "min": 1
+        }
       },
       {
         "id": "EpisodeOfCare.type:operationEpisodeType",
@@ -88,30 +82,6 @@
         "path": "EpisodeOfCare.diagnosis.role.coding",
         "min": 1,
         "max": "1"
-      },
-      {
-        "id": "EpisodeOfCare.patient",
-        "path": "EpisodeOfCare.patient",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Patient"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "EpisodeOfCare.period",
-        "path": "EpisodeOfCare.period",
-        "short": "Time period for this care",
-        "definition": "Time period starting from first admission to discharge after surgery.",
-        "min": 1
-      },
-      {
-        "id": "EpisodeOfCare.period.start",
-        "path": "EpisodeOfCare.period.start",
-        "min": 1
       }
     ]
   }

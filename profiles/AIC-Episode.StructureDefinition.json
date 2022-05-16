@@ -1,0 +1,54 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Episode",
+  "name": "AIC-Episode",
+  "status": "draft",
+  "description": "This is one of the base profiles for AICCELARATE that represents the association of a Patient with a Healthcare Provider for the period of care.",
+  "purpose": "This profile is a part of the common data model designed in AICCELERATE project (https://aiccelerate.eu/) and one of the base profiles to represent an episode of care which can be either a whole hospital stay or different stays in specific wards or ICU, PICU which is the case in AICCELERATE Pilot 3 - part 3 (HSJD), or specific periods of surgical operations which is the case in AICCELERATE Pilot 1.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "EpisodeOfCare",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "EpisodeOfCare.status",
+        "path": "EpisodeOfCare.status",
+        "definition": "Only the statuses (active | finished) are used in AICCELERATE.\r\n- active: It indicates that episode is ongoing\r\n- finished: It indicates that episode is finished"
+      },
+      {
+        "id": "EpisodeOfCare.type",
+        "path": "EpisodeOfCare.type",
+        "short": "Type/class - e.g. disease management, ward stay",
+        "definition": "A classification of the type of episode of care; e.g. ward stay, PICU stay, sub-episodes such as different episodes of an operation, ICU stay etc.",
+        "min": 1
+      },
+      {
+        "id": "EpisodeOfCare.patient",
+        "path": "EpisodeOfCare.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "EpisodeOfCare.period",
+        "path": "EpisodeOfCare.period",
+        "short": "Time period for this care",
+        "definition": "Time period starting from first admission to discharge after surgery.",
+        "min": 1
+      },
+      {
+        "id": "EpisodeOfCare.period.start",
+        "path": "EpisodeOfCare.period.start",
+        "min": 1
+      }
+    ]
+  }
+}

@@ -45,6 +45,18 @@
         "max": "1"
       },
       {
+        "id": "Encounter.episodeOfCare",
+        "path": "Encounter.episodeOfCare",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Episode"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Encounter.hospitalization.dischargeDisposition",
         "path": "Encounter.hospitalization.dischargeDisposition",
         "min": 1,
