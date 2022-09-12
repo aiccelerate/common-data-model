@@ -1,17 +1,19 @@
 {
   "resourceType": "ValueSet",
   "id": "pediatric-palliative-care-assessments",
-  "url": "https://aiccelerate.eu/fhir/ValueSet/pediatric-palliative-care-assessments",  
+  "url": "https://aiccelerate.eu/fhir/ValueSet/pediatric-palliative-care-assessments",
   "version": "0.1",
   "name": "AICCELERATE Pediatric Palliative Care Assessments",
   "status": "draft",
   "experimental": false,
   "date": "2021-11-03",
   "publisher": "AICCELERATE",
-  "contact": [
+  "contact":
+  [
     {
       "name": "AICCELERATE WP1 Team",
-      "telecom": [
+      "telecom":
+      [
         {
           "system": "url",
           "value": "https://aiccelerate.eu/"
@@ -20,12 +22,15 @@
     }
   ],
   "description": "List of assessments/questionnaire used for pediatric palliative care",
-  "compose": {    
+  "compose":
+  {
     "inactive": false,
-    "include": [
+    "include":
+    [
       {
-        "system": "http://snomed.info/sct",        
-        "concept": [
+        "system": "http://snomed.info/sct",
+        "concept":
+        [
           {
             "code": "707621005",
             "display": "Gross Motor Function Classification System (GMFCS)"
@@ -41,39 +46,41 @@
           {
             "code": "443709007",
             "display": "Pediatric modified Glasgow coma scale"
-          }	  
+          }
         ]
       },
-	  {
-		"system": "https://aiccelerate.eu/fhir/CodeSystem/pediatric-assessments",        
-		"concept": [
-			{
-				"code": "pedsql",
-				"display": "Pediatric Quality of Life Inventory (PEDS-QL)"
-			},
-			{
-				"code": "pqol",
-				"display": "Perceived Quality of Life Scale"
-			},
-			{
-				"code": "zarit",
-				"display": "Zarit scale of caregiver burden"
-			},
-			{
-				"code": "dme-c",
-				"display": "Caregiver's emotional discomfort scale"
-			}
-		]
-	  },
-	  {
-		"system": "http://loinc.org",        
-		"concept": [
-		  {
+      {
+        "system": "https://aiccelerate.eu/fhir/CodeSystem/pediatric-assessments",
+        "concept":
+        [
+          {
+            "code": "pedsql",
+            "display": "Pediatric Quality of Life Inventory (PEDS-QL)"
+          },
+          {
+            "code": "pqol",
+            "display": "Perceived Quality of Life Scale"
+          },
+          {
+            "code": "zarit",
+            "display": "Zarit scale of caregiver burden"
+          },
+          {
+            "code": "dme-c",
+            "display": "Caregiver's emotional discomfort scale"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "concept":
+        [
+          {
             "code": "38215-0",
             "display": "Pain severity total [Score] FLACC"
-          }  
-		]
-	  }
+          }
+        ]
+      }
     ]
   }
 }

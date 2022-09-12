@@ -60,11 +60,19 @@
           {
             "code": "Quantity"
           }
-        ],
-        "fixedQuantity": {
-          "system": "http://unitsofmeasure.org",
-          "code": "{score}"
-        }
+        ]
+      },
+      {
+        "id": "Observation.value[x].system",
+        "path": "Observation.value[x].system",
+        "min": 1,
+        "fixedUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Observation.value[x].code",
+        "path": "Observation.value[x].code",
+        "min": 1,
+        "fixedCode": "{score}"
       }
     ]
   }
