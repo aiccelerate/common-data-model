@@ -31,19 +31,21 @@
         "sliceName": "cdsWoundClassification",
         "min": 1,
         "max": "1",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://aiccelerate.eu/fhir/ValueSet/surgical-wound-classification"
+        "fixedCoding": {
+          "system": "http://snomed.info/sct",
+          "code": "420109006"
         }
       },
       {
         "id": "Observation.code.coding:cdsWoundClassification.system",
         "path": "Observation.code.coding.system",
+        "min": 1,
         "fixedUri": "http://snomed.info/sct"
       },
       {
         "id": "Observation.code.coding:cdsWoundClassification.code",
         "path": "Observation.code.coding.code",
+        "min": 1,
         "fixedCode": "420109006"
       },
       {
