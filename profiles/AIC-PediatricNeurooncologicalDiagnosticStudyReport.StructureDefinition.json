@@ -75,7 +75,8 @@
             "code": "Reference",
             "targetProfile": [
               "https://aiccelerate.eu/fhir/StructureDefinition/AIC-HospitalDepartment",
-              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalPractitionerRole"
+              "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricNeurooncologicalPractitionerRole",
+			  "https://aiccelerate.eu/fhir/StructureDefinition/AIC-Practitioner"
             ]
           }
         ]
