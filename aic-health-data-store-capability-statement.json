@@ -2755,6 +2755,7 @@
             "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonMobilityScore",
             "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonNonMotorSymptomAssessment",
             "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonCognitiveBehavioralAssessment",
+            "https://aiccelerate.eu/fhir/StructureDefinition/AIC-ParkinsonCognitiveBehavioralProblemObservation",
             "https://aiccelerate.eu/fhir/StructureDefinition/AIC-PediatricPalliativeCareObservation"
           ],
           "interaction": [

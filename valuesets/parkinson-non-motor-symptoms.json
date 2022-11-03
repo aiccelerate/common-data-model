@@ -67,56 +67,8 @@
             "display": "Pain"
           },
 		  {
-            "code": "449888003",
-            "display": "Normal cognition"
-          },
-		  {
-            "code": "75864003",
-            "display": "Psychiatric symptoms"
-          },
-		  {
-            "code": "66347000",
-            "display": "Impulse control disorder"
-          },
-		  {
-            "code": "736317001",
-            "display": "Impaired executive functioning"
-          },
-		  {
-            "code": "105523009",
-            "display": "Gambling"
-          },
-		  {
-            "code": "7011001",
-            "display": "Hallucinations"
-          },
-		  {
-            "code": "39178003",
-            "display": "Emotional impulsivity"
-          },
-		  {
-            "code": "386807006",
-            "display": "Memory impairement"
-          },
-		  {
-            "code": "304656009",
-            "display": "Unable to use visuospatial reasoning"
-          },
-		  {
-            "code": "289197000",
-            "display": "Lack of fluency in speech"
-          },
-		  {
-            "code": "76039005",
-            "display": "Disturbance of attention"
-          },		  
-		  {
-            "code": "278849000",
-            "display": "Cerebral athropy"
-          },
-		  {
-            "code": "20602000",
-            "display": "Apathy, indifference"
+            "code": "28651003",
+            "display": "Orthostatic hypotension"
           }
         ]
       },

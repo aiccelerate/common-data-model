@@ -1,0 +1,85 @@
+{
+  "resourceType": "ValueSet",
+  "id": "parkinson-non-motor-symptoms",
+  "url": "https://aiccelerate.eu/fhir/ValueSet/parkinson-cognitive-behavioral-problems",  
+  "version": "0.1",
+  "name": "AICCELERATE Parkinson related cognitive/behavioral problems",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-11-03",
+  "publisher": "AICCELERATE",
+  "contact": [
+    {
+      "name": "AICCELERATE WP1 Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://aiccelerate.eu/"
+        }
+      ]
+    }
+  ],
+  "description": "List of important cognitive/behavioral problems for Parkinson disease.",
+  "compose": {    
+    "inactive": false,
+    "include": [
+      {
+        "system": "http://snomed.info/sct",        
+        "concept": [
+		  {
+            "code": "386806002",
+            "display": "Impaired cognition"
+          },
+		  {
+            "code": "75864003",
+            "display": "Psychiatric symptoms"
+          },
+		  {
+            "code": "66347000",
+            "display": "Impulse control disorder"
+          },
+		  {
+            "code": "736317001",
+            "display": "Impaired executive functioning"
+          },
+		  {
+            "code": "105523009",
+            "display": "Gambling"
+          },
+		  {
+            "code": "7011001",
+            "display": "Hallucinations"
+          },
+		  {
+            "code": "39178003",
+            "display": "Emotional impulsivity"
+          },
+		  {
+            "code": "386807006",
+            "display": "Memory impairement"
+          },
+		  {
+            "code": "304656009",
+            "display": "Unable to use visuospatial reasoning"
+          },
+		  {
+            "code": "289197000",
+            "display": "Lack of fluency in speech"
+          },
+		  {
+            "code": "76039005",
+            "display": "Disturbance of attention"
+          },		  
+		  {
+            "code": "9088006",
+            "display": "Lobar athropy"
+          },
+		  {
+            "code": "20602000",
+            "display": "Apathy, indifference"
+          }
+        ]
+      }
+    ]
+  }
+}
