@@ -14,11 +14,6 @@
   "differential": {
     "element": [
       {
-        "id": "Encounter.type",
-        "path": "Encounter.type",
-        "min": 1
-      },
-      {
         "id": "Encounter.subject",
         "path": "Encounter.subject",
         "min": 1,

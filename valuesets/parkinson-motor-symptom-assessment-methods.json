@@ -35,8 +35,8 @@
             "display": "Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Questionnaire"
           },
           {
-            "code": "updrs3",
-            "display": "Unified Parkinson's Disease Rating Scale (UPDRS) Questionnaire v3"
+            "code": "updrs",
+            "display": "Unified Parkinson's Disease Rating Scale (UPDRS) Questionnaire"
           },
           {
             "code": "pkg-ptt",

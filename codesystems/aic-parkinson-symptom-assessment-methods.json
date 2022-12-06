@@ -1,10 +1,10 @@
 {
   "resourceType": "CodeSystem",
-  "id": "parkinson-motor-symptom-assessment-methods", 
-  "url": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-motor-symptom-assessment-methods",
+  "id": "parkinson-nonmotor-symptom-assessment-methods", 
+  "url": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-symptom-assessment-methods",
   "version": "0.1",
-  "name": "AICCELERATE Parkinson Motor Symptom Assessment Methods",
-  "title": "AICCELERATE Parkinson Motor Symptom Assessment Methods",
+  "name": "AICCELERATE Parkinson Symptom Assessment Methods",
+  "title": "AICCELERATE Parkinson Symptom Assessment Methods",
   "status": "draft",  
   "date": "2021-11-03",
   "publisher": "AICCELERATE",
@@ -19,11 +19,11 @@
       ]
     }
   ],
-  "description": "List of custom codes defined within AICCELERATE project for methods of assessments for parkinson motor symptoms",
+  "description": "List of custom codes defined within AICCELERATE project for methods of assessments for parkinson symptoms",
   "caseSensitive": true,
   "content": "complete",  
   "concept": [
-          {
+           {
             "code": "neuropath",
             "display": "NeuroPath System (https://neuropath.life/)"
           },
@@ -32,8 +32,20 @@
             "display": "Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Questionnaire"
           },
           {
-            "code": "updrs3",
-            "display": "Unified Parkinson's Disease Rating Scale (UPDRS) Questionnaire v3"
+            "code": "updrs",
+            "display": "Unified Parkinson's Disease Rating Scale (UPDRS) Questionnaire"
+          },
+          {
+            "code": "nms",
+            "display": "Non Motor Symptom (NMS) Questionnaire"
+          },
+		  {
+            "code": "nmss",
+            "display": "Non-Motor Symptoms Scale for Parkinson's Disease (NMSS)"
+          },		
+		  {
+            "code": "health-village",
+            "display": "Health Village (https://www.terveyskyla.fi/en) Custom Questionnaire"
           },
           {
             "code": "pkg-ptt",
@@ -58,10 +70,6 @@
 		  {
             "code": "n-fogq",
             "display": "New Freezing of Gait Questionnaire"
-          },
-		  {
-            "code": "health-village",
-            "display": "Health Village (https://www.terveyskyla.fi/en) Custom Questionnaire"
           }
   ]
 }

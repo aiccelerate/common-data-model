@@ -3429,6 +3429,10 @@
               "documentation": "Implemented per the specification "
             },
             {
+              "code": "patch",
+              "documentation": "Implemented per the specification "
+            },
+            {
               "code": "search-type",
               "documentation": "Implemented per the specification "
             }

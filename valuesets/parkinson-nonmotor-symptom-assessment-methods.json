@@ -35,12 +35,12 @@
             "display": "Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Questionnaire"
           },
           {
-            "code": "updrs3",
-            "display": "Unified Parkinson's Disease Rating Scale (UPDRS) Questionnaire v3"
+            "code": "updrs",
+            "display": "Unified Parkinson's Disease Rating Scale (UPDRS) Questionnaire"
           },
           {
             "code": "nms",
-            "display": "Non Motor Symptom (NMS) Questionnaire"
+            "display": "Non Motor Rating scale (NMS)"
           },
 		  {
             "code": "nmss",

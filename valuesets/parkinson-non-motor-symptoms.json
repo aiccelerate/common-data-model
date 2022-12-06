@@ -34,10 +34,6 @@
             "code": "39898005",
             "display": "Sleep disorder"
           },
-		  {
-            "code": "248254009",
-            "display": "Quality of sleep"
-          },
           {
             "code": "713567005",
             "display": "Daytime sleepiness"
@@ -69,7 +65,11 @@
 		  {
             "code": "28651003",
             "display": "Orthostatic hypotension"
-          }
+          },
+		  {
+			  "code":"7011001",
+			  "display": "Hallucination"
+		  }
         ]
       },
 	   {
@@ -77,7 +77,7 @@
 		"concept": [
 			{
 				"code": "non-motor-symptoms",
-				"display": "Non Motor Symptoms Score"
+				"display": "Assessment of non-motor symptoms in general"
 			}
 		]
 	   }

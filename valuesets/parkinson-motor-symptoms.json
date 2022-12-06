@@ -61,10 +61,6 @@
 		  {
             "code": "102491009",
             "display": "Immobility"
-          },
-		  {
-            "code": "267082004",
-            "display": "Motor Symptoms Score"
           }
         ]
       },
@@ -78,6 +74,19 @@
 			{
 				"code": "fluctuations",
 				"display": "Fluctuations"
+			}
+		]
+	  },
+	  {
+		"system": "https://loinc.org",        
+		"concept": [
+			{
+				"code": "77720-1",
+				"display": "Motor Symptom Examination"
+			},
+			{
+				"code": "77721-9",
+				"display": "Complications of Parkinson therapy (on motor functions)"
 			}
 		]
 	  }

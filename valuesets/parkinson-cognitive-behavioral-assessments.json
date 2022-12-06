@@ -33,7 +33,15 @@
 		  {
 			"code": "273830002",
 			"display": "The State-Trait Anxiety Inventory (STAi-Y1,2)"  
-		  }		  
+		  },
+		  {
+            "code": "273547007",
+            "display": "Katz ADL scale"
+          },
+		  {
+            "code": "273534002",
+            "display": "Instrumental ADL (iADL) scale"
+          }		  
         ]
       },
 	  {
@@ -167,10 +175,6 @@
 		  {
             "code": "72172-0",
             "display": "Montreal Cognitive Assessment (MoCA)"
-          },
-		  {
-            "code": "57048-1",
-            "display": "ADL/IADL Total Score"
           },
 		  {
             "code": "89209-1",
