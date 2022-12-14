@@ -28,11 +28,19 @@
       {
         "id": "Procedure.category.coding:aicOperationPhaseCode",
         "path": "Procedure.category.coding",
-        "sliceName": "aicOperationPhaseCode",
-        "fixedCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "387713003"
-        }
+        "sliceName": "aicOperationPhaseCode"
+      },
+      {
+        "id": "Procedure.category.coding:aicOperationPhaseCode.system",
+        "path": "Procedure.category.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Procedure.category.coding:aicOperationPhaseCode.code",
+        "path": "Procedure.category.coding.code",
+        "min": 1,
+        "fixedCode": "387713003"
       },
       {
         "id": "Procedure.code",
@@ -56,13 +64,18 @@
       {
         "id": "Procedure.code.coding:icd10pcsCode",
         "path": "Procedure.code.coding",
-        "sliceName": "icd10pcsCode",
+        "sliceName": "icd10pcsCode"
+      },
+      {
+        "id": "Procedure.code.coding:icd10pcsCode.system",
+        "path": "Procedure.code.coding.system",
         "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/icd-10-procedures-ccs"
-        }
+        "fixedUri": "http://hl7.org/fhir/sid/ex-icd-10-procedure"
+      },
+      {
+        "id": "Procedure.code.coding:icd10pcsCode.code",
+        "path": "Procedure.code.coding.code",
+        "min": 1
       }
     ]
   }

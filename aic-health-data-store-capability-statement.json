@@ -1678,7 +1678,8 @@
           "conditionalDelete": "single",
           "referencePolicy": [
             "literal",
-            "local"
+            "local",
+            "logical"
           ],
           "searchInclude": [
             "Encounter.practitioner",

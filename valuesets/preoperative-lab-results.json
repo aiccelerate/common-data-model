@@ -165,7 +165,15 @@
 		  {
             "code": "2160-0",
             "display": "Creatinine [Mass/volume] in Serum or Plasma"
-          }	  
+          },
+		  {
+            "code": "1988-5",
+            "display": "C reactive protein [Mass/volume] in Serum or Plasma"
+          },
+		  {
+            "code": "770-8",
+            "display": "Neutrophils/100 leukocytes in Blood by Automated count"
+          }				  
         ]
       }
     ]
