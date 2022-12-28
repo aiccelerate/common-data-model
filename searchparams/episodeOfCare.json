@@ -1,0 +1,15 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "Resource-episode-of-care",
+  "url" : "https://aiccelerate.eu/fhir/SearchParameter/Resource-episode-of-care",
+  "name" : "Search on extension 'http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare' for several resources",
+  "status" : "draft",
+  "experimental" : true,
+  "publisher" : "AICCELERATE WP1 Team",
+  "description" : "Search by reference to EpisodeOfCare that the resource is related",
+  "code" : "episode-of-care",
+  "base" : ["Observation","AdverseEvent","Condition","Procedure"],
+  "type" : "reference",
+  "expression" : "Resource.extension('http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare').valueReference",
+  "target" : ["EpisodeOfCare"]
+}

@@ -24,6 +24,12 @@
         "id": "Condition.severity",
         "path": "Condition.severity",
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ConditionSeverity"
+            }
+          ],
           "strength": "extensible"
         }
       },
@@ -58,6 +64,12 @@
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/icd-10-cm"
         }
+      },
+      {
+        "id": "Condition.code.coding:icd10Code.system",
+        "path": "Condition.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org/fhir/sid/icd-10"
       },
       {
         "id": "Condition.subject",

@@ -104,6 +104,12 @@
           ],
           "searchParam": [
             {
+              "name": "episode-of-care",
+              "definition": "https://aiccelerate.eu/fhir/SearchParameter/Resource-episode-of-care",
+              "type": "reference",
+              "documentation": "Related episode of care"
+            },
+            {
               "name": "date",
               "definition": "http://hl7.org/fhir/SearchParameter/AdverseEvent-date",
               "type": "date",
@@ -925,6 +931,12 @@
             "RiskAssessment.condition"
           ],
           "searchParam": [
+            {
+              "name": "episode-of-care",
+              "definition": "https://aiccelerate.eu/fhir/SearchParameter/Resource-episode-of-care",
+              "type": "reference",
+              "documentation": "Related episode of care"
+            },
             {
               "name": "severity",
               "definition": "http://hl7.org/fhir/SearchParameter/Condition-severity",
@@ -2825,6 +2837,12 @@
           ],
           "searchParam": [
             {
+              "name": "episode-of-care",
+              "definition": "https://aiccelerate.eu/fhir/SearchParameter/Resource-episode-of-care",
+              "type": "reference",
+              "documentation": "Related episode of care"
+            },
+            {
               "name": "date",
               "definition": "http://hl7.org/fhir/SearchParameter/clinical-date",
               "type": "date",
@@ -4046,6 +4064,12 @@
             "Procedure.reason-reference"
           ],
           "searchParam": [
+            {
+              "name": "episode-of-care",
+              "definition": "https://aiccelerate.eu/fhir/SearchParameter/Resource-episode-of-care",
+              "type": "reference",
+              "documentation": "Related episode of care"
+            },
             {
               "name": "date",
               "definition": "http://hl7.org/fhir/SearchParameter/clinical-date",
