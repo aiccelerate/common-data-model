@@ -15,6 +15,39 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:dailySleepSummary",
+        "path": "Observation.code.coding",
+        "sliceName": "dailySleepSummary",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.code.coding:dailySleepSummary.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.code.coding:dailySleepSummary.code",
+        "path": "Observation.code.coding.code",
+        "min": 1,
+        "fixedCode": "248254009"
+      },
+      {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "min": 1,
@@ -49,15 +82,40 @@
         "id": "Observation.component:deepSleepDuration.code",
         "path": "Observation.component.code",
         "short": "Duration of deep sleep",
-        "definition": "Duration of deep sleep per night",
-        "fixedCodeableConcept": {
-          "coding": [
+        "definition": "Duration of deep sleep per night"
+      },
+      {
+        "id": "Observation.component:deepSleepDuration.code.coding",
+        "path": "Observation.component.code.coding",
+        "slicing": {
+          "discriminator": [
             {
-              "system": "http://loinc.org",
-              "code": "93831-6"
+              "type": "value",
+              "path": "system"
             }
-          ]
-        }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.component:deepSleepDuration.code.coding:loincDeepSleep",
+        "path": "Observation.component.code.coding",
+        "sliceName": "loincDeepSleep",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:deepSleepDuration.code.coding:loincDeepSleep.system",
+        "path": "Observation.component.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://loinc.org"
+      },
+      {
+        "id": "Observation.component:deepSleepDuration.code.coding:loincDeepSleep.code",
+        "path": "Observation.component.code.coding.code",
+        "min": 1,
+        "fixedCode": "93831-6"
       },
       {
         "id": "Observation.component:deepSleepDuration.value[x]",
@@ -78,19 +136,41 @@
         "sliceName": "numOfAwake",
         "short": "Number of interruptions",
         "definition": "Number of interruptions for sleep",
+        "min": 1,
         "max": "1"
       },
       {
-        "id": "Observation.component:numOfAwake.code",
-        "path": "Observation.component.code",
-        "fixedCodeableConcept": {
-          "coding": [
+        "id": "Observation.component:numOfAwake.code.coding",
+        "path": "Observation.component.code.coding",
+        "slicing": {
+          "discriminator": [
             {
-              "system": "http://snomed.info/sct",
-              "code": "67233009"
+              "type": "value",
+              "path": "system"
             }
-          ]
-        }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.component:numOfAwake.code.coding:snomedNumOfInterruptions",
+        "path": "Observation.component.code.coding",
+        "sliceName": "snomedNumOfInterruptions",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:numOfAwake.code.coding:snomedNumOfInterruptions.system",
+        "path": "Observation.component.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.component:numOfAwake.code.coding:snomedNumOfInterruptions.code",
+        "path": "Observation.component.code.coding.code",
+        "min": 1,
+        "fixedCode": "713822005"
       },
       {
         "id": "Observation.component:numOfAwake.value[x]",
@@ -101,6 +181,64 @@
             "code": "integer"
           }
         ]
+      },
+      {
+        "id": "Observation.component:sleepDuration",
+        "path": "Observation.component",
+        "sliceName": "sleepDuration",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:sleepDuration.code.coding",
+        "path": "Observation.component.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.component:sleepDuration.code.coding:loincSleepDuration",
+        "path": "Observation.component.code.coding",
+        "sliceName": "loincSleepDuration",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:sleepDuration.code.coding:loincSleepDuration.system",
+        "path": "Observation.component.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://loinc.org"
+      },
+      {
+        "id": "Observation.component:sleepDuration.code.coding:loincSleepDuration.code",
+        "path": "Observation.component.code.coding.code",
+        "min": 1,
+        "fixedCode": "93832-4"
+      },
+      {
+        "id": "Observation.component:sleepDuration.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Duration"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:sleepDuration.value[x].value",
+        "path": "Observation.component.value[x].value",
+        "minValueDecimal": 0.0
       }
     ]
   }
