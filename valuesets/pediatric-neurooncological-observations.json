@@ -24,7 +24,7 @@
     "inactive": false,
     "include": [
       {
-        "system": "https://loinc.org",        
+        "system": "http://loinc.org",        
         "concept": [
 		  {
             "code": "84892-9",
@@ -53,6 +53,46 @@
 		  {
             "code": "89015-2",
             "display": "Hearing function measured by pure-tone audiometry (PTA)"
+          },
+		  {
+            "code": "10230-1",
+            "display": "Ejection Fraction - EF (Left Ventricular)"
+          },
+		  {
+            "code": "18051-3",
+            "display": "Fractional shortening - FS(Left ventricular Fractional shortening minor axis by US)"
+          },
+		  {
+            "code": "18076-0",
+            "display": "Left ventricle size in systole (Left ventricular Major axis apical systole [Length] by US 2D)"
+          },
+		  {
+            "code": "12025-3",
+            "display": "Left ventricle size in diastole (Left ventricle [Length] Minor axis.diastole Measured by real time two dimension US)"
+          },
+		  {
+            "code": "18156-0",
+            "display": "Posterior wall thickness (Left ventricular posterior wall Thickness during systole by US)"
+          },
+		  {
+            "code": "18154-5",
+            "display": "Septal thickness in diastole (Interventricular septum Thickness during diastole by US)"
+          },
+		  {
+            "code": "80066-4",
+            "display": "Mitral flow in diastole A-wave - MVA (Mitral valve Maximum A-wave velocity by US.doppler)"
+          },
+		  {
+            "code": "80070-6",
+            "display": "Mitral flow in diastole E-wave - MVE (Mitral valve Maximum E-wave velocity by US.doppler)"
+          },
+		  {
+            "code": "18038-0",
+            "display": "MVE/MVA Mitral valve Peak E wave/Peak A wave by US.doppler"
+          },
+		  {
+            "code": "21976-6",
+            "display": "Cancer Outcome Status"
           }
         ]
       }
