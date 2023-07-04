@@ -125,6 +125,30 @@
 		  {
             "code": "162182005",
             "display": "Diuresis"
+          },
+          {
+            "code": "89138009",
+            "display": "Cardiogenic shock"
+          },
+          {
+            "code": "64228003",
+            "display": "Paralysis of diaphragm"
+          },
+          {
+            "code": "410429000",
+            "display": "Cardiac arrest"
+          },
+          {
+            "code": "397767007",
+            "display": "Acute respiratory failure requiring reintubation"
+          },
+          {
+            "code": "251175005",
+            "display": "Ventricular extrasystole"
+          },
+          {
+            "code": "64779008",
+            "display": "Blood coagulation disorder"
           }
         ]
       }

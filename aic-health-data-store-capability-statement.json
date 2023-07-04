@@ -2811,7 +2811,8 @@
           "conditionalDelete": "single",
           "referencePolicy": [
             "literal",
-            "local"
+            "local",
+            "logical"
           ],
           "searchInclude": [
             "Observation.subject",

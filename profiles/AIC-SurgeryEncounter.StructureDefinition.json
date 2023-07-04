@@ -114,11 +114,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Encounter.location",
-        "path": "Encounter.location",
-        "min": 1
       }
     ]
   }
