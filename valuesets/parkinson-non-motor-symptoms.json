@@ -35,10 +35,6 @@
             "display": "Sleep disorder"
           },
           {
-            "code": "713567005",
-            "display": "Daytime sleepiness"
-          },
-          {
             "code": "404640003",
             "display": "Dizziness"
           },
@@ -69,6 +65,46 @@
 		  {
 			  "code":"7011001",
 			  "display": "Hallucination"
+		  },
+		  {
+			  "code":"48340000",
+			  "display": "Incontinence"
+		  },
+		  {
+			  "code":"40739000",
+			  "display": "Dysphagia"
+		  },
+		  {
+			  "code":"235675006",
+			  "display": "Gastroparesis"
+		  },
+		  {
+			  "code":"288961002",
+			  "display": "Saliva control problem"
+		  },
+		  {
+			  "code":"415238003",
+			  "display": "REM sleep behaviour disorder"
+		  },
+		  {
+			  "code":"193462001",
+			  "display": "Insomnia"
+		  },
+		  {
+			  "code":"67233009",
+			  "display": "Interrupted Sleep"
+		  },
+		  {
+			  "code":"230489007",
+			  "display": "Excessive Daytime sleepiness"
+		  },
+		  {
+			  "code":"32914008",
+			  "display": "Restless legs"
+		  },
+		   {
+			  "code":"84229001",
+			  "display": "Fatigue"
 		  }
         ]
       },

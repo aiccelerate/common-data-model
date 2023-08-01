@@ -81,9 +81,54 @@
           {
             "code": "35489007",
             "display": "Depression"
+          },
+		  {
+			  "code":"725122008",
+			  "display": "Micrographia"
+		  },
+		  {
+			  "code":"29164008",
+			  "display": "Speech Disturbance"
+		  },
+		  {
+			  "code":"285242009",
+			  "display": "Bradyphrenia"
+		  },
+		  {
+            "code": "48694002",
+            "display": "Anxiety"
+          },
+		  {
+            "code": "1217332007",
+            "display": "Persistent sadness (Deflected mood)"
+          },
+		  {
+            "code": "247973004",
+            "display": "Disinhibited behavior"
+          },
+		  {
+            "code": "55929007",
+            "display": "Irritability"
+          },
+		  {
+            "code": "2073000",
+            "display": "Delusions"
           }
         ]
-      }
+      },
+	  {
+		"system": "https://aiccelerate.eu/fhir/CodeSystem/parkinson-symptoms",        
+		"concept": [
+			{
+				"code": "anomie",
+				"display": "Anomie"
+			},			
+			{
+				"code": "hypomimia",
+				"display": "Hypomimia"
+			}
+		]
+	   }
     ]
   }
 }

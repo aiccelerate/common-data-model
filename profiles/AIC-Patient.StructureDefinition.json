@@ -107,12 +107,7 @@
       {
         "id": "Patient.deceased[x]",
         "path": "Patient.deceased[x]",
-        "definition": "Indicates if the individual is deceased or not and date of death.",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ]
+        "definition": "Indicates if the individual is deceased or not and date of death."
       },
       {
         "id": "Patient.address",
