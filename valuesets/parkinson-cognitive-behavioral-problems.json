@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "parkinson-non-motor-symptoms",
+  "id": "parkinson-cognitive-behavioral-problems",
   "url": "https://aiccelerate.eu/fhir/ValueSet/parkinson-cognitive-behavioral-problems",
   "version": "0.1",
   "name": "AICCELERATE Parkinson related cognitive/behavioral problems",

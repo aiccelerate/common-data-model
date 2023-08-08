@@ -39,8 +39,8 @@
             "display": "Dizziness"
           },
 		  {
-            "code": "415690000",
-            "display": "Sweating"
+            "code": "52526003",
+            "display": "Sweating problem"
           },
 		  {
             "code": "139394000",
@@ -102,9 +102,13 @@
 			  "code":"32914008",
 			  "display": "Restless legs"
 		  },
-		   {
+		  {
 			  "code":"84229001",
 			  "display": "Fatigue"
+		  },
+		  {
+			  "code":"13791008",
+			  "display": "Weakness"
 		  }
         ]
       },

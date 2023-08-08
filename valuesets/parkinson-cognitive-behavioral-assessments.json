@@ -124,6 +124,10 @@
 				"display": "Rey–Osterrieth complex figure test(ROCF) Copying Z-score"
 			},
 			{
+				"code": "rocf-d",
+				"display": "Rey–Osterrieth complex figure test(ROCF) Delayed Z-score"
+			},
+			{
 				"code": "bjlot",
 				"display": "Benton Judgment of Line Orientation Test (BJLOT) Z-score"
 			},
@@ -162,6 +166,14 @@
 			{
 				"code": "gca",
 				"display": "Global cortical atrophy score"
+			},
+			{
+				"code": "stai-y1",
+				"display": "The State-Trait Anxiety Inventory - Y1 Form"
+			},
+			{
+				"code": "stai-y2",
+				"display": "The State-Trait Anxiety Inventory - Y2 Form"
 			}
 		]
 	  },

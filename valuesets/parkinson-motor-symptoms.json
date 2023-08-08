@@ -61,6 +61,42 @@
 		  {
             "code": "102491009",
             "display": "Immobility"
+          },
+		  {
+            "code": "1230308005",
+            "display": "Off-time"
+          },
+		  {
+            "code": "8011004",
+            "display": "Dysarthria"
+          },
+		  {
+            "code": "271700006",
+            "display": "Chorea"
+          },
+		  {
+            "code": "386783003",
+            "display": "Tic"
+          },
+		  {
+            "code": "13534001",
+            "display": "Camptocormia"
+          },
+		  {
+            "code": "34527004",
+            "display": "Hypophonia"
+          },
+		  {
+            "code": "34288008",
+            "display": "Pisa syndrome (Pleurothotonus)"
+          },
+		  {
+            "code": "22325002",
+            "display": "Abnormal gait"
+          },
+		  {
+            "code": "267082004",
+            "display": "Motor Symptoms"
           }
         ]
       },
@@ -74,6 +110,14 @@
 			{
 				"code": "fluctuations",
 				"display": "Fluctuations"
+			},
+			{
+				"code": "troublesome-dyskinesia",
+				"display": "Troublesome Dyskinesia (> 1h per day)"
+			},
+			{
+				"code": "reduced-arm-swing",
+				"display": "Reduced Arm Swing"
 			}
 		]
 	  },
@@ -82,11 +126,19 @@
 		"concept": [
 			{
 				"code": "77720-1",
-				"display": "Motor Symptom Examination"
+				"display": "UPDRS - Motor Symptom Examination"
 			},
 			{
 				"code": "77721-9",
-				"display": "Complications of Parkinson therapy (on motor functions)"
+				"display": "UPDRS - Complications of Parkinson therapy (on motor functions)"
+			},
+			{
+				"code": "77718-5",
+				"display": "UPDRS - Mentation, Behavior and Mood"
+			},
+			{
+				"code": "77719-3",
+				"display": "UPDRS - Activities of Daily Living"
 			}
 		]
 	  }
