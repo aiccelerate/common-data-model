@@ -132,11 +132,6 @@
         "path": "Patient.address.use",
         "min": 1,
         "fixedCode": "home"
-      },
-      {
-        "id": "Patient.address:homeAddress.postalCode",
-        "path": "Patient.address.postalCode",
-        "min": 1
       }
     ]
   }

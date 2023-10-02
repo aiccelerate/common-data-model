@@ -49,6 +49,10 @@
 		  {
             "code": "398068008",
             "display": "PACU Stay (Transfer to PACU)"
+          },
+		   {
+            "code": "74964007",
+            "display": "Other"
           }
         ]
       }
