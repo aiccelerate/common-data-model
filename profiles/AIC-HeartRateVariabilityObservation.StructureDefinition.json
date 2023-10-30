@@ -53,7 +53,7 @@
         "min": 1,
         "type": [
           {
-            "code": "Period"
+            "code": "dateTime"
           }
         ]
       },
@@ -63,17 +63,9 @@
         "min": 1,
         "type": [
           {
-            "code": "SampledData"
+            "code": "Quantity"
           }
         ]
-      },
-      {
-        "id": "Observation.value[x].origin",
-        "path": "Observation.value[x].origin",
-        "fixedQuantity": {
-          "system": "http://unitsofmeasure.org",
-          "code": "ms"
-        }
       }
     ]
   }

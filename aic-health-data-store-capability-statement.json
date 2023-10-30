@@ -2583,6 +2583,145 @@
           ]
         },
         {
+          "type" : "MedicationDispense",
+          "profile" : "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+          "interaction" : [{
+            "code" : "read",
+            "documentation" : "Implemented per the specification (or Insert other doco here)"
+          },
+            {
+              "code" : "vread",
+              "documentation" : "Implemented per the specification (or Insert other doco here)"
+            },
+            {
+              "code" : "update",
+              "documentation" : "Implemented per the specification (or Insert other doco here)"
+            },
+            {
+              "code" : "delete",
+              "documentation" : "Implemented per the specification (or Insert other doco here)"
+            },
+            {
+              "code" : "history-instance",
+              "documentation" : "Implemented per the specification (or Insert other doco here)"
+            },
+            {
+              "code" : "create",
+              "documentation" : "Implemented per the specification (or Insert other doco here)"
+            },
+            {
+              "code" : "search-type",
+              "documentation" : "Implemented per the specification (or Insert other doco here)"
+            }],
+          "conditionalCreate" : true,
+          "conditionalUpdate" : true,
+          "conditionalDelete" : "multiple",
+          "referencePolicy" : ["literal",
+            "logical"],
+          "searchInclude" : ["MedicationDispense.performer",
+            "MedicationDispense.receiver",
+            "MedicationDispense.subject",
+            "MedicationDispense.destination",
+            "MedicationDispense.medication",
+            "MedicationDispense.responsibleparty",
+            "MedicationDispense.prescription",
+            "MedicationDispense.patient",
+            "MedicationDispense.context"],
+          "searchRevInclude" : ["ChargeItem.service",
+            "MedicationStatement.part-of",
+            "Observation.part-of"],
+          "searchParam" : [{
+            "name" : "identifier",
+            "definition" : "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+            "type" : "token",
+            "documentation" : "Returns dispenses with this external identifier"
+          },
+            {
+              "name" : "performer",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-performer",
+              "type" : "reference",
+              "documentation" : "Returns dispenses performed by a specific individual"
+            },
+            {
+              "name" : "code",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type" : "token",
+              "documentation" : "Returns dispenses of this medicine code"
+            },
+            {
+              "name" : "receiver",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-receiver",
+              "type" : "reference",
+              "documentation" : "The identity of a receiver to list dispenses for"
+            },
+            {
+              "name" : "subject",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-subject",
+              "type" : "reference",
+              "documentation" : "The identity of a patient for whom to list dispenses"
+            },
+            {
+              "name" : "destination",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-destination",
+              "type" : "reference",
+              "documentation" : "Returns dispenses that should be sent to a specific destination"
+            },
+            {
+              "name" : "medication",
+              "definition" : "http://hl7.org/fhir/SearchParameter/medications-medication",
+              "type" : "reference",
+              "documentation" : "Returns dispenses of this medicine resource"
+            },
+            {
+              "name" : "responsibleparty",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-responsibleparty",
+              "type" : "reference",
+              "documentation" : "Returns dispenses with the specified responsible party"
+            },
+            {
+              "name" : "type",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-type",
+              "type" : "token",
+              "documentation" : "Returns dispenses of a specific type"
+            },
+            {
+              "name" : "whenhandedover",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-whenhandedover",
+              "type" : "date",
+              "documentation" : "Returns dispenses handed over on this date"
+            },
+            {
+              "name" : "whenprepared",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-whenprepared",
+              "type" : "date",
+              "documentation" : "Returns dispenses prepared on this date"
+            },
+            {
+              "name" : "prescription",
+              "definition" : "http://hl7.org/fhir/SearchParameter/medications-prescription",
+              "type" : "reference",
+              "documentation" : "The identity of a prescription to list dispenses from"
+            },
+            {
+              "name" : "patient",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+              "type" : "reference",
+              "documentation" : "The identity of a patient to list dispenses  for"
+            },
+            {
+              "name" : "context",
+              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationDispense-context",
+              "type" : "reference",
+              "documentation" : "Returns dispenses with a specific context (episode or episode of care)"
+            },
+            {
+              "name" : "status",
+              "definition" : "http://hl7.org/fhir/SearchParameter/medications-status",
+              "type" : "token",
+              "documentation" : "Returns dispenses with a specified dispense status"
+            }]
+        },
+        {
           "type": "MedicationStatement",
           "profile": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
           "supportedProfile": [
