@@ -108,7 +108,6 @@
     },
     {
       "resource": "CodeSystem",
-      "shardKey": ["_id"],
       "indexes": [
         {"parameters": ["url"]}
       ]
